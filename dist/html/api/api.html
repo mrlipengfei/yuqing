@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>API接口</title>
+    <link rel="stylesheet" href="../../Lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../../css/common.css">
+</head>
+<body class="theme1 api-content">
+   	<!--header-->
+		<header id='_header2' style='background:rgba(0,0,0,1);position: relative;' class='_header2'>
+			<section class='_header_con'>
+				<section class='logoTwo'>
+					<a href="../index.html">
+						<img src="../../images/logo2.1.png" alt="" />
+					</a>
+				</section>
+				<section class='rightTwo'>
+					<nav class='_navTwo clearfix'>
+						<li class="_indexNav"><a href="../index.html"><span class='iconfont icon-shouye shouye'></span><i>首页</i></a></li>
+						<li class='_productNav'><a href="../product/product.html">产品与服务</a></li>
+						<li class='_apiNav'><a href="javascript:;">API接口</a></li>
+						<li class='_contactNav'><a href="../aboutUs/aboutUS.html" class='fei-contact'>关于我们</a></li>
+					</nav>
+					<div class="landr">
+						<a href="../loginAndRegister/loginAndRegister.html">立即登录</a>
+						<a href="../apply/apply.html">申请试用</a>
+					</div>
+				</section>
+			</section>
+		</header>
+		<div class="apiBanner" style='background:url(../../images/apiT.png) no-repeat center;width:100%;height:471px;'>
+			
+		</div>
+    <div class="main">
+        <h3>
+            <i></i>舆情API说明
+        </h3>
+        <div class="tab" id="api-tab">
+            <ul>
+                <li class="active" ><a href="#search_info">舆情列表搜索接口</a></li>
+                <li><a  href="#statis_info">舆情统计分析接口</a></li>
+                <li><a  href="#error_info">错误提示信息</a></li>
+            </ul>
+        </div>
+        <div class="t-content">
+            <p class="encoded">请求编码格式 UTF-8；请求频率限制 60 次/分钟</p>
+            <div class="title" id="search_info">
+                舆情列表搜索
+            </div>
+            <table>
+                <!--请求参数说明-->
+                <tr>
+                    <td class="w150" rowspan="11">请求参数说明</td>
+                    <td>
+                        <div class="td-group">
+                            <span class="key none">key</span>
+                            <span class="text">含义</span>
+                            <span class="des">备注</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="active">
+                        <div class="td-group">
+                            <span class="key">secretkey</span>
+                            <span class="text">授权唯一标识</span>
+                            <span class="des">必填</span>
+                        </div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <div class="td-group">
+                            <span class="key">pageNum</span>
+                            <span class="text">查询页</span>
+                            <span class="des">必填</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="active">
+                        <div class="td-group">
+                            <span class="key">pageSize</span>
+                            <span class="text">每页显示条数</span>
+                            <span class="des">必填(上限 200 条)</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="td-group">
+                            <span class="key">merge</span>
+                            <span class="text">相似文章是否合并</span>
+                            <span class="des">true,false(查询相似文章时用 false)</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="active">
+                        <div class="td-group">
+                            <span class="key">publishTime</span>
+                            <span class="text">发布时间范围</span>
+                            <span class="des">必填 举例:”20160801120000- 20160802230000”</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="td-group">
+                            <span class="key">queryKeys</span>
+                            <span class="text">搜索词</span>
+                            <span class="des">词语用英文字符逗号分隔,表示或的关系 此中出现空格表示且的关系举例:”辽宁 暴乱,辽宁 治安,辽宁” (或 的词组最多支持 5 组)</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="active">
+                        <div class="td-group">
+                            <span class="key">noQueryKeys</span>
+                            <span class="text">排除词</span>
+                            <span class="des">屏蔽包含排除词的文章,多词用英文逗号分隔</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="td-group">
+                            <span class="key">sentiments</span>
+                            <span class="text">情感类型</span>
+                            <span class="des">选填(默认查询全部)1:负面 2:中性 3:正面示例:”1,2”</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="active">
+                        <div class="td-group">
+                            <span class="key">sort</span>
+                            <span class="text">排序</span>
+                            <span class="des">“score” 相关度排序(默认) “time” 时间排序</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="td-group">
+                            <span class="key">dupid</span>
+                            <span class="text">相似文章 id</span>
+                            <span class="des">选填(来自文章的 duplicates 值)</span>
+                        </div>
+                    </td>
+                </tr>
+
+                <!--返回结果说明-->
+                <tr>
+                    <td class="w150" rowspan="11">返回结果说明</td>
+                    <td class="active">
+                        <div class="td-group">
+                            <span class="key">pageInfo</span>
+                            <span class="text">分页信息</span>
+                            <span class="des"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <div class="td-group">
+                            <span class="key">curPageNo</span>
+                            <span class="text">当前页</span>
+                            <span class="des"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="active">
+                        <div class="td-group">
+                            <span class="key">pageSize</span>
+                            <span class="text">每页条数</span>
+                            <span class="des"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <div class="td-group">
+                            <span class="key">timeConsum</span>
+                            <span class="text">耗时(毫秒)</span>
+                            <span class="des"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="active">
+                        <div class="td-group">
+                            <span class="key">totalRecords</span>
+                            <span class="text">总记录数</span>
+                            <span class="des"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <div class="td-group">
+                            <span class="key">totalPages</span>
+                            <span class="text">总页数</span>
+                            <span class="des"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="active">
+                        <div class="td-group">
+                            <span class="key">resultList</span>
+                            <span class="text">列表信息</span>
+                            <span class="des"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <div class="td-group">
+                            <span class="key">authorName</span>
+                            <span class="text">作者</span>
+                            <span class="des"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="active">
+                        <div class="td-group">
+                            <span class="key">content</span>
+                            <span class="text">正文内容</span>
+                            <span class="des"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <div class="td-group">
+                            <span class="key">contenthtml</span>
+                            <span class="text">带 html 格式的正文内容</span>
+                            <span class="des"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="active">
+                        <div class="td-group">
+                            <span class="key">duplicates</span>
+                            <span class="text">相似 id</span>
+                            <span class="des">
+                                用于查询相似文章<br>
+                                1 查询相似文章时:<br>
+                                2 参数 merge 设置 false 3 Dupid 设置此字段的值 4 其他查询参数不变
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+
+                <!--返回结果展示-->
+                <tr>
+                    <td class="w150">返回结果展示</td>
+                    <td class="result">
+                       <img src="../../images/api-result.png">
+                    </td>
+                </tr>
+            </table>
+
+            <div class="title" id="statis_info">
+                舆情统计分析
+            </div>
+            <table>
+                <!--请求参数说明-->
+                <tr>
+                    <td class="w150" rowspan="8">请求参数说明</td>
+                    <td>
+                        <div class="td-group">
+                            <span class="key none">key</span>
+                            <span class="text">含义</span>
+                            <span class="des">备注</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="active">
+                        <div class="td-group">
+                            <span class="key">secretkey</span>
+                            <span class="text">授权唯一标识</span>
+                            <span class="des">必填</span>
+                        </div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <div class="td-group">
+                            <span class="key">chartType</span>
+                            <span class="text">统计类型</span>
+                            <span class="des">必填</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="active">
+                        <div class="td-group">
+                            <span class="key">publishTime</span>
+                            <span class="text">发布时间范围</span>
+                            <span class="des">必填</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="td-group">
+                            <span class="key">queryKeys</span>
+                            <span class="text">搜索词</span>
+                            <span class="des">词语用英文字符逗号分隔,表示或的关系</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="active">
+                        <div class="td-group">
+                            <span class="key">noQueryKeys</span>
+                            <span class="text">排除词</span>
+                            <span class="des">选填(默认查询全部)1:负面 2:中性 3:正面 示例:”1,2”</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="td-group">
+                            <span class="key">mediaTypes</span>
+                            <span class="text">媒体类型</span>
+                            <span class="des">
+                                选填(默认查询全部) <br>
+                                1:新闻<br>
+                                3:论坛<br>
+                                4:微博<br>
+                                5:贴吧<br>
+                                6:博客<br>
+                                10:微信公众号<br>
+                                11:视频<br>
+                                示例:”1,3”
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="active result ps">
+
+                            (ps: 涉及走势的统计 查询参数在 48 小时内,以小时为单位统计;大于 48 小时以天为单位统计)
+
+                    </td>
+                </tr>
+
+                <!--返回结果说明-->
+                <tr>
+                    <td class="w150" rowspan="6">返回结果说明</td>
+                    <td>
+                        <div class="td-group">
+                            <span class="key">count</span>
+                            <span class="text">统计值</span>
+                            <span class="des"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="active">
+                        <div class="td-group">
+                            <span class="key">time</span>
+                            <span class="text">时间点</span>
+                            <span class="des">yyyyMMdd/yyyyMMddhh(精确到天) 48小时内精确到小时  </span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <div class="td-group">
+                            <span class="key">sentimentType</span>
+                            <span class="text">情感类型</span>
+                            <span class="des">1:负面  2:中性  3:负面</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="active">
+                        <div class="td-group">
+                            <span class="key">mediaTypeId</span>
+                            <span class="text">媒体类型 id</span>
+                            <span class="des">1:新闻类 3:论坛 4:微博 6:博客 10:微信 5:贴吧 11:视频</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <div class="td-group">
+                            <span class="key">key</span>
+                            <span class="text">时间</span>
+                            <span class="des">yyyyMMdd/yyyyMMddhh(精确到天) 48小时内精确到小时</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="active">
+                        <div class="td-group">
+                            <span class="key">mediaId</span>
+                            <span class="text">媒体名称 / 省名</span>
+                            <span class="des"></span>
+                        </div>
+                    </td>
+                </tr>
+                <!--返回结果展示-->
+                <tr>
+                    <td class="w150" rowspan="5">返回结果展示</td>
+                    <td class="result">
+                        1. 声量走势示例
+                        <img src="../../images/api-result2-1.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="result">
+                        2. 情感分析示例
+                        <img src="../../images/api-result2-2.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="result">
+                        3. 媒体来源 top10
+                        <img src="../../images/api-result2-3.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="result">
+                        4. 媒体类型分布
+                        <img src="../../images/api-result2-4.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="result">
+                        5. 媒体类型走势
+                        <img src="../../images/api-result2-5.png">
+                    </td>
+                </tr>
+            </table>
+
+            <div class="title" id="error_info">
+                错误信息提示
+            </div>
+            <table>
+                <tr>
+                    <td class="err-code">
+                        "6001", "超出访问频率,一分钟后再试"<br>
+                        "5001", " 或 的关键词 不能超过 5 组"<br>
+                        "4002", " 1 万条 以后的数据不予提供"<br>
+                        "4001", "每页条数上限 200 条"<br>
+                        "3003", "时间范围不能大于 90 天"<br>
+                        "3002", "时间格式不正确"<br>
+                        "3001", "时间范围不能为空"<br>
+                        "2002", "账户余额不足"<br>
+                        "2001", "无权限访问"<br>
+                        "1001", " secretke 值不能为空"<br>
+                        "1000", "缺少查询参数"<br>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+    <!--footer-->
+     <div class="footerWhite2">
+	<!--<div class="footerWhite_con">
+		<ul>
+			<li class="active"><a href="../nowHot/index.html"><i>实时热点</i></a></li>
+				<li class="fl heatIndex navItem">
+		            <a href="../heatIndex/heatIndex.html">
+		               热度指数
+		            </a>
+		        </li>
+		        <li class="fl publicOpinionTrend navItem">
+		            <a href="../publicOpinionMonitor/publicOpinionTrend.html">
+	                 	主题监测
+		            </a>
+		        </li>
+		        <li class="fl eventStudy navItem">
+		            <a href="../eventStudy/eventSelect.html">
+		                事件分析
+		            </a>
+		        </li>
+		        <li class="fl competing navItem">
+		            <a href="../competing/competingOption.html">
+		                竞品分析
+		            </a>
+		        </li>
+		        <li class="fl navItem report">
+		            <a href="../report/reportIndex.html">
+		               	 数据报告
+		            </a>
+		        </li>
+		        <li class="fl navItem search">
+		            <a href="../search/searchIndex.html">
+		                全网搜索
+		            </a>
+		            <img src="../../images/footWhite.png" alt="" />
+		        </li>
+			
+		</ul>
+		
+		
+	</div>-->
+	<div class="foot-down">
+			<div class="footdown-con">
+				© 京ICP备12012279号 版权所有 九次方大数据信息集团有限公司
+			</div>
+		</div>
+</div>
+				
+</body>
+</html>
+<script src="../../Lib/jquery-1.12.4.min.js"></script>
+<script src="../../Lib/layui/layui.js"></script>
+<script src="../../js/public.js"></script>
+<script>
+    $(function(){
+        $("#api-tab li").on("click",function(){
+            $(this).addClass('active').siblings().removeClass('active');
+            var dom_id = $(this).find('a').attr('href');
+            console.log($(this).find('a').attr('href'));
+
+            $("html, body").animate({
+                scrollTop: $(dom_id).offset().top + "px"
+            }, {
+                duration: 500,
+                easing: "swing"
+            });
+            return false;
+        });
+    })
+</script>
+
+

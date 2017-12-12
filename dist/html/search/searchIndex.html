@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	    <meta name="description" content="" />
+	    <meta name="keywords" content="" />
+	    <title>全网搜索</title>
+	    <link rel="stylesheet" href="../../Lib/iconfont/iconfont.css">
+	    <link rel="stylesheet" href="../../Lib/layui/css/layui.css">
+	    <link rel="stylesheet" href="../../css/common.css">
+	</head>
+	<body class="theme1 search">
+		<!--header-->
+		<header id='_header2' class='_header3' style='background: rgba(0,0,0,1);position: static;margin-bottom:30px;'>
+	<section class='_header_con2'>
+		<section class='logoTwo logo2'>
+			<a href="../index.html">
+				<img src="../../images/logo2.1.png" alt="" />
+			</a>
+		</section>
+		<section class='rightTwo' style='display:none;'>
+			<nav class='_navTwo clearfix'>
+				<li class="active"><a href="###"><span class='iconfont icon-shouye shouye'></span><i>首页</i></a></li>
+				<li><a href="./product/product.html">产品与服务</a></li>
+				<li><a href="./api/api.html">API接口</a></li>
+				<li><a href="./aboutUs/aboutUs.html" class='fei-contact'>关于我们</a></li>
+			</nav>
+			<div class="landr">
+				<a href="./loginAndRegister/loginAndRegister.html">立即登录</a>
+				<a href="./apply/apply.html">申请试用</a>
+			</div>
+		</section>
+		<!--<a href="javascript:;" class='skin'>
+			<img src="../images/skin.gif" alt="" />
+		</a>-->
+
+		<section class='rightTwo2 clearfix' style=''>
+			<nav class='_navTwo _navTwo2 clearfix'>
+				<li class='_heatIndex'><a href="../nowHot/index.html">实时热点</a></li>
+				<li class="fl heatIndex navItem">
+		            <a href="../heatIndex/heatIndex.html">
+		               热度指数
+		            </a>
+		        </li>
+		        <li class="fl publicOpinionTrend navItem">
+		            <a href="../publicOpinionMonitor/publicOpinionTrend.html">
+	                 	主题监测
+		            </a>
+		        </li>
+		        <li class="fl eventStudy navItem">
+		            <a href="../eventStudy/eventSelect.html">
+		                事件分析
+		            </a>
+		        </li>
+		        <li class="fl competing navItem">
+		            <a href="../competing/competingOption.html">
+		                竞品分析
+		            </a>
+		        </li>
+		        <li class="fl navItem report">
+		            <a href="../report/reportIndex.html">
+		               	 数据报告
+		            </a>
+		        </li>
+		        <li class="fl navItem search">
+		            <a href="../search/searchIndex.html">
+		                全网搜索
+		            </a>
+		        </li>
+			</nav>
+			<!--<div class="landr">
+				<a href="./loginAndRegister/loginAndRegister.html">立即登录</a>
+				<a href="./apply/apply.html">申请试用</a>
+			</div>-->
+		</section>
+		<div class='headerNavCenter landr landr2'>
+			<i class='iconfont icon-iconfontgerenzhongxin'></i>
+			<img src="../images/center.gif" alt="" />
+			<a href="../userCenter/index.html" class='a1'>用户名</a>
+			<em class='iconfont icon-sign-out' style='' title='退出'></em>
+		</div>
+		
+	</section>
+</header>
+
+		<!--main-->
+		<div class="main searchIndex-mainWrap">
+			
+				<!--高级搜索-->
+			<form class="layui-form layui-form-pane" action="">	
+				<div class="feiSearch">
+	                <div class="fei search-wrap">
+	                	<span>全网搜索</span>	
+	                	<div class='search-box' >
+	                		<input type="text" class="fei search-txt" name='bbb' placeholder="请输入您想搜索的关键词或文章标题">
+	                    	<i class="iconfont icon-sousuo" id="searchIcon"></i>
+	                	</div>
+						<p class='gao-plyj gao-p'>
+							<span class='gao-sapn'>高级搜索</span>
+							<span class='iconfont icon-jiantouyoushuang-1' style='display:inline-block;height:24px;line-height:24px;color: #ff7826;font-size: 14px;'></span>
+						</p>
+	                </div>
+	                <!--<div class='fei-gao fei-gaoL'>
+	                	<p class='gao-p'>
+	                		<span>高级搜索</span>
+	                		<span class='iconfont icon-jiantouyoushuang-1'></span>
+	                	</p>
+	                	
+	                </div>-->
+	                <div class='fei stretch-fei' >
+		                <div class="fei-stretch">
+		                	<div class="fei-keyword">
+		                		<span>包含关键词：</span>
+		                		<input type="text" class="keyword-input feiword-input" placeholder="多个关键词之间用空格分隔">
+		                	</div>
+		                	<div class="fei-noKeyword">
+		                		<span>不包含关键词：</span>
+		                		<input type="text" class="noKeyword-input feiword-input" placeholder="多个关键词之间用空格分隔">
+		                	</div>
+		                	<div class="fei-noKeyword fei layui-form-item">	                		
+								    <span class='fei-type'>情感类型&nbsp;:</span>
+								    <input type="radio" name="sex" value="nan" title="全部" checked="">
+									<input type="radio" name="sex" value="nv" title="正面" >
+									<input type="radio" name="sex" value="" title="中立" >
+									<input type="radio" name="sex" value="nv" title="负面" >								
+		                	</div>
+		                	<div class="fei-noKeyword fei layui-form-item" >	                		
+								    <span class='fei-type'>媒体类型&nbsp;:</span>
+								    <input type="radio" name="aa" value="nan" title="全部" checked="">
+									<input type="radio" name="aa" value="nv" title="新闻" >
+									<input type="radio" name="aa" value="" title="微信" >
+									<input type="radio" name="aa" value="nv" title="微博" >	
+									<input type="radio" name="aa" value="" title="论坛" >
+									<input type="radio" name="aa" value="nv" title="博客" >								
+		                	</div>
+		                	<div class="fei-noKeyword fei fei1 layui-form-item">
+								    <span class='fei-type'>选择类型&nbsp;:</span>
+								    <input type="radio" name="bb" value="nan" title="相关度" checked="">
+									<input type="radio" name="bb" value="nv" title="时间">								
+		                	</div>
+		                	<div class="fei-noKeyword fei fei1 layui-form-item">
+								    <span class='fei-type'>选择时间&nbsp;:</span>
+								    <input type="radio" name="cc" value="nan" title="24小时" checked="">
+									<input type="radio" name="cc" value="nv" title="一周">
+									<input type="radio" name="cc" value="nv" title="一小时">
+									<input type="radio" name="cc" value="nv" title="自定义">
+									<div class="fei layui-inline"> <!-- 注意：这一层元素并不是必须的 -->
+									 	 <input type="text" class="layui-input" id="startTime"  placeholder="开始时间 15:00">								 	
+									</div>
+									
+							    	<div class=" layui-inline"> <!-- 注意：这一层元素并不是必须的 -->
+									 	 <input type="text" class="layui-input" id="overTime"  placeholder="结束时间 15:00">
+									</div>
+		                	</div>
+		                	<div class='_search'>
+								<button type='button'>搜索</button>
+								<button type='button' class="gao-qxgjss">取消</button>
+		                	</div>
+	
+		                </div>
+	
+
+					</div>
+				</div>
+			</form> 	
+				<!--最新热点-->
+			<div class="searchHot clearfix">
+				<div class="fei-mainCon clearfix">
+					<div class="searchHot-left">
+						<div class='fei-hot' style='line-height:21px;'>
+							<span></span>
+							<i>最新热点</i>
+						</div>
+						<div class="mainConBottom">
+		               <form class="layui-form" action="">
+		                <ul class="newsList">
+		                  <li>
+		                        <div class="newsTop clearfix">
+		                           
+		                            <div class="fl fei newsSubject">
+		                                <h4 class="newsTitle"><span>一带一路</span>读本</h4>
+		                                <div class="newsMsg">
+		                                    <span class="mewsSource">百度</span>
+		                                    <span class="newsDate">2016/4/8 8:50</span>
+		                                    <span class="newsLink">来源：<a href="">原文链接</a></span>
+		                                    
+		                                </div>
+		                            </div>
+		                            
+		                           
+		                        </div>
+		                        <div class="fei newsBottom">
+		                           公告]宝光实业亏损：购回股份及 发行新股份之一带一路 重选董事 及 股东周年大会通告 时间：2017年07月11日 18:34:54 中财网 此乃要件請即處理 閣下如對本通函任何內容或應採取之行動有任何疑問，應諮詢　閣下之股票經紀或 其他註冊證券商 . . .
+		                        </div>
+		                  </li>
+		                   <li>
+		                        <div class="newsTop clearfix">
+		                           
+		                            <div class="fl fei newsSubject">
+		                                <h4 class="newsTitle"><span>一带一路</span>读本</h4>
+		                                <div class="newsMsg">
+		                                    <span class="mewsSource">百度</span>
+		                                    <span class="newsDate">2016/4/8 8:50</span>
+		                                    <span class="newsLink">来源：<a href="">原文链接</a></span>
+		                                    
+		                                </div>
+		                            </div>
+		                            
+		                           
+		                        </div>
+		                        <div class="fei newsBottom">
+		                           公告]宝光实业亏损：购回股份及 发行新股份之一带一路 重选董事 及 股东周年大会通告 时间：2017年07月11日 18:34:54 中财网 此乃要件請即處理 閣下如對本通函任何內容或應採取之行動有任何疑問，應諮詢　閣下之股票經紀或 其他註冊證券商 . . .
+		                        </div>
+		                  </li>
+		                   <li>
+		                        <div class="newsTop clearfix">
+		                           
+		                            <div class="fl fei newsSubject">
+		                                <h4 class="newsTitle"><span>一带一路</span>读本</h4>
+		                                <div class="newsMsg">
+		                                    <span class="mewsSource">百度</span>
+		                                    <span class="newsDate">2016/4/8 8:50</span>
+		                                    <span class="newsLink">来源：<a href="">原文链接</a></span>
+		                                    
+		                                </div>
+		                            </div>
+		                            
+		                           
+		                        </div>
+		                        <div class="fei newsBottom">
+		                           公告]宝光实业亏损：购回股份及 发行新股份之一带一路 重选董事 及 股东周年大会通告 时间：2017年07月11日 18:34:54 中财网 此乃要件請即處理 閣下如對本通函任何內容或應採取之行動有任何疑問，應諮詢　閣下之股票經紀或 其他註冊證券商 . . .
+		                        </div>
+		                  </li>
+		                   <li>
+		                        <div class="newsTop clearfix">
+		                           
+		                            <div class="fl fei newsSubject">
+		                                <h4 class="newsTitle"><span>一带一路</span>读本</h4>
+		                                <div class="newsMsg">
+		                                    <span class="mewsSource">百度</span>
+		                                    <span class="newsDate">2016/4/8 8:50</span>
+		                                    <span class="newsLink">来源：<a href="">原文链接</a></span>
+		                                    
+		                                </div>
+		                            </div>
+		                            
+		                           
+		                        </div>
+		                        <div class="fei newsBottom">
+		                           公告]宝光实业亏损：购回股份及 发行新股份之一带一路 重选董事 及 股东周年大会通告 时间：2017年07月11日 18:34:54 中财网 此乃要件請即處理 閣下如對本通函任何內容或應採取之行動有任何疑問，應諮詢　閣下之股票經紀或 其他註冊證券商 . . .
+		                        </div>
+		                  </li>
+		                   <li>
+		                        <div class="newsTop clearfix">
+		                           
+		                            <div class="fl fei newsSubject">
+		                                <h4 class="newsTitle"><span>一带一路</span>读本</h4>
+		                                <div class="newsMsg">
+		                                    <span class="mewsSource">百度</span>
+		                                    <span class="newsDate">2016/4/8 8:50</span>
+		                                    <span class="newsLink">来源：<a href="">原文链接</a></span>
+		                                    
+		                                </div>
+		                            </div>
+
+		                        </div>
+		                        <div class="fei newsBottom">
+		                           公告]宝光实业亏损：购回股份及 发行新股份之一带一路 重选董事 及 股东周年大会通告 时间：2017年07月11日 18:34:54 中财网 此乃要件請即處理 閣下如對本通函任何內容或應採取之行動有任何疑問，應諮詢　閣下之股票經紀或 其他註冊證券商 . . .
+		                        </div>
+		                  </li>
+		                  
+		                 
+						</ul>
+						</form>
+						</div>	
+					</div>
+	
+					<div class="searchHot-right">
+						<div class='fei-hot'>
+							<span></span>
+							<i>最新热点</i>
+						</div>
+						<ul>
+							
+							
+						<li class='fei-odd'>
+								<a href="">汽车</a>
+							</li>
+							<li>
+								<a href="">汽车</a>
+							</li>
+							<li class='fei-odd'>
+								<a href="">汽车</a>
+							</li>
+							<li >
+								<a href="">汽车</a>
+							</li>
+							<li class='fei-odd'>
+								<a href="">汽车</a>
+							</li>
+							<li>
+								<a href="">汽车</a>
+							</li>
+							<li class='fei-odd'>
+								<a href="">汽车</a>
+							</li>
+							<li >
+								<a href="">汽车</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+			
+		</div>
+		<!--footer-->
+	 <div class="footerWhite2">
+	<!--<div class="footerWhite_con">
+		<ul>
+			<li class="active"><a href="../nowHot/index.html"><i>实时热点</i></a></li>
+				<li class="fl heatIndex navItem">
+		            <a href="../heatIndex/heatIndex.html">
+		               热度指数
+		            </a>
+		        </li>
+		        <li class="fl publicOpinionTrend navItem">
+		            <a href="../publicOpinionMonitor/publicOpinionTrend.html">
+	                 	主题监测
+		            </a>
+		        </li>
+		        <li class="fl eventStudy navItem">
+		            <a href="../eventStudy/eventSelect.html">
+		                事件分析
+		            </a>
+		        </li>
+		        <li class="fl competing navItem">
+		            <a href="../competing/competingOption.html">
+		                竞品分析
+		            </a>
+		        </li>
+		        <li class="fl navItem report">
+		            <a href="../report/reportIndex.html">
+		               	 数据报告
+		            </a>
+		        </li>
+		        <li class="fl navItem search">
+		            <a href="../search/searchIndex.html">
+		                全网搜索
+		            </a>
+		            <img src="../../images/footWhite.png" alt="" />
+		        </li>
+			
+		</ul>
+		
+		
+	</div>-->
+	<div class="foot-down">
+			<div class="footdown-con">
+				© 京ICP备12012279号 版权所有 九次方大数据信息集团有限公司
+			</div>
+		</div>
+</div>
+				
+		<script src="../../Lib/jquery-1.12.4.min.js"></script>
+		<script src="../../Lib/layui/layui.js"></script>
+		<script src="../../js/public.js"></script>
+		<script src="../../js/reportIndex.js"></script>
+		<script src="../../js/searchIndex.js"></script>
+	</body>
+</html>
+

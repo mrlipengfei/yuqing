@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <title>事件分析-详情</title>
+  <style>
+    #echarts {
+      width: 100%;
+      height: 630px;
+    }
+  </style>
+</head>
+<body>
+  <div id="echarts"></div>
+</body>
+</html>
+<script src="../../Lib/jquery-1.12.4.min.js"></script>
+<script src="../../Lib/echarts-all-2.js"></script>
+<script>
+  $(function () {
+    chart7();
+    //页面尺寸发生变化，重绘所有Echart图表
+    window.onresize = function(){
+      chart7.resize();
+    }
+    //传播途径
+    function chart7() {
+      option = {
+        series : [
+          {
+            name:'树图',
+            type:'tree',
+            orient: 'horizontal',  // vertical horizontal
+            rootLocation: {x: 80,y: 150}, // 根节点位置  {x: 100, y: 'center'}
+            nodePadding: 20,
+            layerPadding: 200,
+            hoverable: false,
+            roam: false,//是否开启滚轮缩放
+            symbol: 'image://../../images/blue-dot.png',
+            //symbolSize: 15,
+            itemStyle: {
+              normal: {
+                color: '#3293FF',
+                label: {
+                  show: true,
+                  position: 'right',
+                  formatter: "{b}",
+                  textStyle: {
+                    color: "#000",
+                    fontSize: 14
+                  }
+                },
+                lineStyle: {
+                  color: '#ccc',
+                  type: 'curve' // 'curve'|'broken'|'solid'|'dotted'|'dashed'
+
+                }
+              },
+              emphasis: {
+                color: '#4883b4',
+                label: {
+                  show: false
+                },
+                borderWidth: 0
+              }
+            },
+            data: [
+              {
+                name: '五联疫苗',
+                symbolSize: 15,
+                children: [
+                  {name: '巴南广播电视台（首发）'},
+                  {
+                    name: '华龙网',
+                    children :[
+                      {
+                        name: '中国经济网',
+                        children:[
+                          {name: '东北网'}
+                        ]
+                      },
+                      {name: '新浪网'},
+                      {
+                        name: '中国新闻网',
+                        children:[
+                          {
+                            name:'中国青年网',
+                            children:[
+                              {name:'中国江苏网'},
+                              {name:'东方视野'},
+                              {name:'武进新闻网'},
+                              {name:'东方网'},
+                              {name:'中华网'},
+                              {name:'中国西藏网'}
+                            ]
+                          },
+                          {name:'大众网'},
+                          {name:'中国网江苏'},
+                          {name:'中国网河南'},
+                          {name:'重庆视界'},
+                          {
+                            name:'中国日报网',
+                            children:[
+                              {name:'大河网'},
+                              {name:'海外网'},
+                              {name:'环球网'}
+                            ]
+                          }
+                        ]
+                      },
+                      {name: '贵阳网'},
+                      {
+                        name: '中国青年网',
+                        children:[
+                          {name:'中国江苏网'},
+                          {name:'东方视野'},
+                          {name:'武进新闻网'},
+                          {
+                            name:'东方网',
+                            children:[
+                              {name:'新浪网'},
+                              {name:'中国网江苏'}
+                            ]
+                          },
+                          {
+                            name:'中华网',
+                            children:[
+                              {name:'今日头条'}
+                            ]
+                          },
+                          {name:'中国西藏网'}
+                        ]
+                      },
+                      {name: '中国新闻网辽宁'}
+                    ]
+                  }
+                ]
+              }
+            ]
+
+          }
+        ]
+      };
+      chart7 = echarts.init(document.getElementById('echarts'));
+      chart7.setOption(option)
+    }
+  })
+</script>
+

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>舆情监测-舆情动态</title>
+    <link rel="stylesheet" href="../../Lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../../Lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/common.css">
+</head>
+<body class="theme1 publicOpinionTrend">
+    <div class='commonHeader'>
+	<div class='header-wrap'>
+		<div class='header-logo'>
+			<a href="../index.html">
+				<img src="../../images/logo-white.png" alt="" />
+			</a>
+		</div>
+		<div class='header-right'>
+			<nav class='header-nav'>
+				<li><a href="../index.html"><span class='iconfont icon-shouye shouye'></span><i>首页</i></a></li>
+				<li class="apply-use"><a href="../apply/apply.html">申请使用</a></li>
+				<li class="api-content"><a href="../api/api.html">API接口</a></li>
+				<li class='header-li'><a href="javascript:;" class='fei-contact'>联系我们</a>
+
+				</li>
+			</nav>
+			<div class='fei contact'>
+				<!--<img src="../../images/white-sanjiao.png" alt="" />-->
+				<ul class="fei _contact">
+					<li>
+						<i class='iconfont icon-iconfontgerenzhongxin'></i>
+						<span>何先生</span>
+					</li>
+					<li>
+						<i class='iconfont icon-youxiang'></i>
+						<span>hyr@jusfoun.com</span>
+					</li>
+					<li>
+						<i class='iconfont icon-iconfontcolor39'></i>
+						<span>13600009999</span>
+					</li>
+					<li>
+						<i class='iconfont icon-dizhi'></i>
+						<span>北京市海淀区王庄路1号院清华同方
+	科技广场D座西楼16层</span>
+					</li>
+				</ul>
+			</div>
+			
+			<div class='headerNavCenter'>
+				<i class='iconfont icon-iconfontgerenzhongxin'></i>
+				<!--<img src="../images/center.gif" alt="" />-->
+				<span class='header-perCenter'>
+					用户名
+				</span>
+				<em class='iconfont icon-jiantousanjiaoxia'></em>
+				<ul class="header-pull">
+					<li>
+						<img src="../../images/white-sanjiao.png" alt="" />
+						<i class='iconfont icon-gerenzhongxin'></i>
+						<span><a href="../userCenter/index.html">个人中心</a></span>
+					</li>
+					<li>
+						<i class='iconfont icon-dianyuan'></i>
+						<span>退出</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--<a href="javascript:;" class='skin'>
+			<img src="../images/skin.gif" alt="" />
+		</a>-->
+	</div>
+</div>
+    <!--<div class="navBarWrapper">
+    <ul class="navBar clearfix">
+        <li class="fl heatIndex navItem">
+            <a href="../heatIndex/heatIndex.html">
+               热度指数
+            </a>
+        </li>
+        <li class="fl publicOpinionTrend navItem">
+            <a href="../publicOpinionMonitor/publicOpinionTrend.html">
+                舆情监测
+            </a>
+            <ul class="subNav">
+                <li class="subNavItem">
+                    <a class="subNavItemA" href="../publicOpinionMonitor/publicOpinionTrend.html">
+                        舆情动态
+                    </a>
+                </li>
+                <li class="subNavItem">
+                    <a class="subNavItemA" href="../publicOpinionMonitor/publicOpinionAnalysis.html">
+                        舆情分析
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="fl eventStudy navItem">
+            <a href="../eventStudy/eventSelect.html">
+                事件分析
+            </a>
+        </li>
+        <li class="fl competing navItem">
+            <a href="../competing/competingOption.html">
+                竞品分析
+            </a>
+        </li>
+        <li class="fl navItem report">
+            <a href="../report/reportIndex.html">
+                舆情报告
+            </a>
+        </li>
+        <li class="fl publicOpinionWarn navItem">
+            <a href="../publicOpinionWarn/publicOpinionWarn.html">
+                舆情预警
+            </a>
+        </li>
+        <li class="fl theme-manage navItem">
+            <a href="../theme/list.html">
+                主题管理
+            </a>
+        </li>
+        <li class="fl navItem search">
+            <a href="../search/searchIndex.html">
+                全网搜索
+            </a>
+        </li>
+    </ul>
+    
+</div>-->
+	
+<header id='_header2' style='background: rgba(0,0,0,1);position: static;margin-bottom:30px;'>
+	<section class='_header_con2'>
+		<section class='logoTwo logo2'>
+			<a href="../index.html">
+				<img src="../../images/logo2.1.png" alt="" />
+			</a>
+		</section>
+		<section class='rightTwo2 clearfix' style=''>
+			<nav class='_navTwo _navTwo2 clearfix'>
+				<li class='_heatIndex'><a href="../nowHot/index.html">实时热点</a></li>
+				<li class="fl heatIndex navItem">
+		            <a href="../heatIndex/heatIndex.html">
+		               热度指数
+		            </a>
+		        </li>
+		        <li class="fl publicOpinionTrend navItem">
+		            <a href="../publicOpinionMonitor/publicOpinionTrend.html" class='_red'>
+	                 	主题监测
+		            </a>
+		        </li>
+		        <li class="fl eventStudy navItem">
+		            <a href="../eventStudy/eventSelect.html">
+		                事件分析
+		            </a>
+		        </li>
+		        <li class="fl competing navItem">
+		            <a href="../competing/competingOption.html">
+		                竞品分析
+		            </a>
+		        </li>
+		        <li class="fl navItem report">
+		            <a href="../report/reportIndex.html">
+		               	 数据报告
+		            </a>
+		        </li>
+		        <li class="fl navItem search">
+		            <a href="../search/searchIndex.html">
+		                全网搜索
+		            </a>
+		        </li>
+			</nav>
+		</section>
+		<div class='headerNavCenter landr landr2'>
+				<i class='iconfont icon-iconfontgerenzhongxin'></i>
+				<img src="../images/center.gif" alt="" />
+				<a href="../userCenter/index.html" class='a1'>用户名</a>
+				<em class='iconfont icon-sign-out' style='' title='退出'></em>
+			</div>
+	</section>
+</header>
+
+
+    <div class="main main_con" style="overflow: hidden;">
+    	<ul class='annlysisNav clearfix'>
+	<li class='li1'><a href="./publicOpinionTrend.html">主题动态</a></li>
+	<li class='li2'><a href="./publicOpinionAnalysis.html">主题分析</a></li>
+	<li class='li3'><a href="./alertLog.html">预警日志</a></li>
+	<li class='li4'><a href="./themeManager.html">主题管理</a></li>
+</ul>
+
+        <div class="mainCon mainCon3">
+            <div class="mainConTop clearfix">
+                <form class="layui-form fl" action="">
+                    <div class="layui-form-item" pane="">
+                        <input type="checkbox" name="like1[write]" lay-skin="primary" title="全选"  lay-filter="allChoose">
+                    </div>
+                </form>
+                <span class="favButton fl">批量收藏</span>
+                <span class="delButton fl">批量删除</span>
+                <span class="fr goBack">
+                    <i class="iconfont icon-fanhui"></i>
+                    返回舆情动态
+                </span>
+            </div>
+            <div class="mainConBottom fei ">
+                <form class="layui-form" action="">
+                <ul class="newsList">
+                    <li class="newsListLi">
+                        <div class="newsTop clearfix">
+                            <div class="layui-form-item fl" pane="">
+                                <input  type="checkbox" name="like1[write]" lay-skin="primary" title=""  lay-filter="itemChoose">
+                            </div>
+                            <div class="fl newsSubject">
+                                <h4 class="newsTitle"><a href="articleDetails.html"><span>一带一路111</span>读本</a></h4>
+                                <div class="newsMsg">
+                                    <span class="mewsSource">百度</span>
+                                    <span class="newsDate">2016/4/8 8:50</span>
+                                    <span class="newsLink">来源：<a href="">原文链接</a></span>
+                                    <a class="similarNews" href="./publicOpinionTrend-similarArticle.html">相似文章数 <i class="similarNewsNum">(25)</i></a>
+                                </div>
+                            </div>
+                            <div class="layui-form-item fl clearnone">
+                                <div class="types">
+                                    <select name="interest" lay-filter="types" class="selectDom">
+                                        <option value="3">正面</option>
+                                        <option value="2">中性</option>
+                                        <option value="1">负面</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <ul class="fr clearfix">
+                                <li class="fl fenxiangLi">
+                                    <i class="iconfont icon-fenxiang"></i>
+                                    <div class="fenxiangDiv">
+                                        <i class="iconfont icon-weibo"></i>
+                                        <i class="iconfont icon-weixin"></i>
+                                        <i class="iconfont icon-kongjian1"></i>
+                                    </div>
+                                </li>
+                                <li class="fl deleteLi">
+                                    <i class="iconfont icon-3"></i>
+                                </li>
+                                <li class="fl">
+                                    <i class="iconfont icon-zhifeiji-copy"></i>
+                                </li>
+                                <li class="fl starLi">
+                                    <i class="iconfont icon-star_off-copy "></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="newsBottom">
+                            正文正文文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文
+                        </div>
+                    </li>
+                    <li class="newsListLi">
+                        <div class="newsTop clearfix">
+                            <div class="layui-form-item fl" pane="">
+                                <input type="checkbox" name="like1[write]" lay-skin="primary" title=""  lay-filter="itemChoose">
+                            </div>
+                            <div class="fl newsSubject">
+                                <h4 class="newsTitle"><a href="articleDetails.html"><span>一带一路222</span>读本</a></h4>
+                                <div class="newsMsg">
+                                    <span class="mewsSource">百度</span>
+                                    <span class="newsDate">2016/4/8 8:50</span>
+                                    <span class="newsLink">来源：<a href="">原文链接</a></span>
+                                    <a class="similarNews" href="./publicOpinionTrend-similarArticle.html">相似文章数 <i class="similarNewsNum">(25)</i></a>
+                                </div>
+                            </div>
+                            <div class="layui-form-item fl clearnone">
+                                <div class="types">
+                                    <select name="interest" lay-filter="types" class="selectDom">
+                                        <option value="3">正面</option>
+                                        <option value="2">中性</option>
+                                        <option value="1">负面</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <ul class="fr clearfix">
+                                <li class="fl fenxiangLi">
+                                    <i class="iconfont icon-fenxiang"></i>
+                                    <div class="fenxiangDiv">
+                                        <i class="iconfont icon-weibo"></i>
+                                        <i class="iconfont icon-weixin"></i>
+                                        <i class="iconfont icon-kongjian1"></i>
+                                    </div>
+                                </li>
+                                <li class="fl deleteLi">
+                                    <i class="iconfont icon-3"></i>
+                                </li>
+                                <li class="fl">
+                                    <i class="iconfont icon-zhifeiji-copy"></i>
+                                </li>
+                                <li class="fl starLi">
+                                    <i class="iconfont icon-star_off-copy "></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="newsBottom">
+                            文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文
+                        </div>
+                    </li>
+                    <li class="newsListLi">
+                        <div class="newsTop clearfix">
+                            <div class="layui-form-item fl" pane="">
+                                <input type="checkbox" name="like1[write]" lay-skin="primary" title=""  lay-filter="itemChoose">
+                            </div>
+                            <div class="fl newsSubject">
+                                <h4 class="newsTitle"><a href="articleDetails.html"><span>一带一路333</span>读本</a></h4>
+                                <div class="newsMsg">
+                                    <span class="mewsSource">百度</span>
+                                    <span class="newsDate">2016/4/8 8:50</span>
+                                    <span class="newsLink">来源：<a href="">原文链接</a></span>
+                                    <a class="similarNews" href="./publicOpinionTrend-similarArticle.html">相似文章数 <i class="similarNewsNum">(25)</i></a>
+                                </div>
+                            </div>
+                            <div class="layui-form-item fl clearnone">
+                                <div class="types">
+                                    <select name="interest" lay-filter="types" class="selectDom">
+                                        <option value="3">正面</option>
+                                        <option value="2">中性</option>
+                                        <option value="1">负面</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <ul class="fr clearfix">
+                                <li class="fl fenxiangLi">
+                                    <i class="iconfont icon-fenxiang"></i>
+                                    <div class="fenxiangDiv">
+                                        <i class="iconfont icon-weibo"></i>
+                                        <i class="iconfont icon-weixin"></i>
+                                        <i class="iconfont icon-kongjian1"></i>
+                                    </div>
+                                </li>
+                                <li class="fl deleteLi">
+                                    <i class="iconfont icon-3"></i>
+                                </li>
+                                <li class="fl">
+                                    <i class="iconfont icon-zhifeiji-copy"></i>
+                                </li>
+                                <li class="fl starLi">
+                                    <i class="iconfont icon-star_off-copy "></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="newsBottom">
+                            正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文
+                        </div>
+                    </li>
+                    <li class="newsListLi">
+                        <div class="newsTop clearfix">
+                            <div class="layui-form-item fl" pane="">
+                                <input type="checkbox" name="like1[write]" lay-skin="primary" title=""  lay-filter="itemChoose">
+                            </div>
+                            <div class="fl newsSubject">
+                                <h4 class="newsTitle"><a href="articleDetails.html"><span>一带一路444</span>读本</a></h4>
+                                <div class="newsMsg">
+                                    <span class="mewsSource">百度</span>
+                                    <span class="newsDate">2016/4/8 8:50</span>
+                                    <span class="newsLink">来源：<a href="">原文链接</a></span>
+                                    <a class="similarNews" href="./publicOpinionTrend-similarArticle.html">相似文章数 <i class="similarNewsNum">(25)</i></a>
+                                </div>
+                            </div>
+                            <div class="layui-form-item fl clearnone">
+                                <div class="types">
+                                    <select name="interest" lay-filter="types" class="selectDom">
+                                        <option value="3">正面</option>
+                                        <option value="2">中性</option>
+                                        <option value="1">负面</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <ul class="fr clearfix">
+                                <li class="fl fenxiangLi">
+                                    <i class="iconfont icon-fenxiang"></i>
+                                    <div class="fenxiangDiv">
+                                        <i class="iconfont icon-weibo"></i>
+                                        <i class="iconfont icon-weixin"></i>
+                                        <i class="iconfont icon-kongjian1"></i>
+                                    </div>
+                                </li>
+                                <li class="fl deleteLi">
+                                    <i class="iconfont icon-3"></i>
+                                </li>
+                                <li class="fl">
+                                    <i class="iconfont icon-zhifeiji-copy"></i>
+                                </li>
+                                <li class="fl starLi">
+                                    <i class="iconfont icon-star_off-copy "></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="newsBottom">
+                            文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文
+                        </div>
+                    </li>
+                    <li class="newsListLi">
+                        <div class="newsTop clearfix">
+                            <div class="layui-form-item fl" pane="">
+                                <input type="checkbox" name="like1[write]" lay-skin="primary" title=""  lay-filter="itemChoose">
+                            </div>
+                            <div class="fl newsSubject">
+                                <h4 class="newsTitle"><a href="articleDetails.html"><span>一带一路</span>读本</a></h4>
+                                <div class="newsMsg">
+                                    <span class="mewsSource">百度</span>
+                                    <span class="newsDate">2016/4/8 8:50</span>
+                                    <span class="newsLink">来源：<a href="">原文链接</a></span>
+                                    <a class="similarNews" href="./publicOpinionTrend-similarArticle.html">相似文章数 <i class="similarNewsNum">(25)</i></a>
+                                </div>
+                            </div>
+                            <div class="layui-form-item fl clearnone">
+                                <div class="types">
+                                    <select name="interest" lay-filter="types" class="selectDom">
+                                        <option value="3">正面</option>
+                                        <option value="2">中性</option>
+                                        <option value="1">负面</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <ul class="fr clearfix">
+                                <li class="fl fenxiangLi">
+                                    <i class="iconfont icon-fenxiang"></i>
+                                    <div class="fenxiangDiv">
+                                        <i class="iconfont icon-weibo"></i>
+                                        <i class="iconfont icon-weixin"></i>
+                                        <i class="iconfont icon-kongjian1"></i>
+                                    </div>
+                                </li>
+                                <li class="fl deleteLi">
+                                    <i class="iconfont icon-3"></i>
+                                </li>
+                                <li class="fl">
+                                    <i class="iconfont icon-zhifeiji-copy"></i>
+                                </li>
+                                <li class="fl starLi">
+                                    <i class="iconfont icon-star_off-copy "></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="newsBottom">
+                            正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文
+                        </div>
+                    </li>
+                    <li class="newsListLi">
+                        <div class="newsTop clearfix">
+                            <div class="layui-form-item fl" pane="">
+                                <input type="checkbox" name="like1[write]" lay-skin="primary" title=""  lay-filter="itemChoose">
+                            </div>
+                            <div class="fl newsSubject">
+                                <h4 class="newsTitle"> <a href="articleDetails.html"><span>一带一路</span>读本</a></h4>
+                                <div class="newsMsg">
+                                    <span class="mewsSource">百度</span>
+                                    <span class="newsDate">2016/4/8 8:50</span>
+                                    <span class="newsLink">来源：<a href="">原文链接</a></span>
+                                    <a class="similarNews" href="./publicOpinionTrend-similarArticle.html">相似文章数 <i class="similarNewsNum">(25)</i></a>
+                                </div>
+                            </div>
+                            <div class="layui-form-item fl clearnone">
+                                <div class="types">
+                                    <select name="interest" lay-filter="types" class="selectDom">
+                                        <option value="3">正面</option>
+                                        <option value="2">中性</option>
+                                        <option value="1">负面</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <ul class="fr clearfix">
+                                <li class="fl fenxiangLi">
+                                    <i class="iconfont icon-fenxiang"></i>
+                                    <div class="fenxiangDiv">
+                                        <i class="iconfont icon-weibo"></i>
+                                        <i class="iconfont icon-weixin"></i>
+                                        <i class="iconfont icon-kongjian1"></i>
+                                    </div>
+                                </li>
+                                <li class="fl deleteLi">
+                                    <i class="iconfont icon-3"></i>
+                                </li>
+                                <li class="fl">
+                                    <i class="iconfont icon-zhifeiji-copy"></i>
+                                </li>
+                                <li class="fl starLi">
+                                    <i class="iconfont icon-star_off-copy "></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="newsBottom">
+                            文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文
+                        </div>
+                    </li>
+                </ul>
+                </form>
+                <!--推送弹框-->
+                <div class='feiPush'>
+                    <div id="fei-push" class='fei-push' style="display:none;padding:0 35px; background:#fff;">
+
+                        <form class='layui-form layui-form-pane'  action="">
+                            <p class='yuqing-push' style=''>舆情信息推送</p>
+                            <div class="push-surplus">
+                                <div class="push-type fei layui-form-item">
+                                    <span class='fei-type'>发送类型&nbsp;:</span>
+                                    <input type="radio" name="se" value="phone" title="手机短信" checked="">
+                                    <input type="radio" name="se" value="mail" title="电子邮件" >
+                                </div>
+
+                                <div class='push-phone'>
+                                    <span style=''>手机号码&nbsp;:</span>
+                                    <input type="text" placeholder="请输入手机号码" />
+                                </div>
+                                <div class='push-mail'>
+                                    <span style=''>邮箱地址&nbsp;:</span>
+                                    <input type="text" placeholder="请输入邮箱地址" />
+                                </div>
+                                <div class='push-content'>
+                                    <span style=''>发送内容&nbsp;:</span>
+                                    <textarea name="" rows="" cols="">
+
+										</textarea>
+                                </div>
+
+                                <div class='push-yan'>
+                                    <span style=''>验证码：</span>
+                                    <input type="text" placeholder="请输入验证码"/>
+                                    <img src="../../images/push-yan.png" alt="" />
+                                </div>
+
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+
+
+
+                <div class="pageWrap clearfix">
+                    <div class="totalPage fl">
+                        共<span>333</span>页 / 3333条记录
+                    </div>
+                    <div id="page" class="fr page"></div>
+                </div>
+                <!--删除提示框-->
+                <div class="deleteBox">
+                    <div id="deleteBox">您确定要删除此条信息吗？</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footerWhite">
+	<div class="footerWhite_con">
+		<ul>
+			<li>
+				<a href="">关于我们</a>
+			</li>
+			<li>
+				<a href="">联系我们</a>
+			</li>
+			<li>
+				<a href="">帮助中心</a>
+				<img src="../../images/footWhite.png" alt="" />
+			</li>
+		</ul>
+		<span>Copyright ©2013-2017 千图网 沪ICP备10011451号-6</span>
+	</div>
+</div>
+
+</body>
+</html>
+<script src="../../Lib/jquery-1.12.4.min.js"></script>
+<script src="../../Lib/layui/layui.js"></script>
+<script src="../../js/public.js"></script>
+<script src="../../js/publicOpinionTrend-similarArticle.js"></script>
+
+
+

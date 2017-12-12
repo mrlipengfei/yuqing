@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>个人中心-新消息设置</title>
+    <link rel="stylesheet" href="../../Lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../../Lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/common.css">
+</head>
+<body class="theme1 userCenter">
+    <header id='_header2' class='_header3' style='background: rgba(0,0,0,1);position: static;margin-bottom:30px;'>
+	<section class='_header_con2'>
+		<section class='logoTwo logo2'>
+			<a href="../index.html">
+				<img src="../../images/logo2.1.png" alt="" />
+			</a>
+		</section>
+		<section class='rightTwo' style='display:none;'>
+			<nav class='_navTwo clearfix'>
+				<li class="active"><a href="###"><span class='iconfont icon-shouye shouye'></span><i>首页</i></a></li>
+				<li><a href="./product/product.html">产品与服务</a></li>
+				<li><a href="./api/api.html">API接口</a></li>
+				<li><a href="./aboutUs/aboutUs.html" class='fei-contact'>关于我们</a></li>
+			</nav>
+			<div class="landr">
+				<a href="./loginAndRegister/loginAndRegister.html">立即登录</a>
+				<a href="./apply/apply.html">申请试用</a>
+			</div>
+		</section>
+		<!--<a href="javascript:;" class='skin'>
+			<img src="../images/skin.gif" alt="" />
+		</a>-->
+
+		<section class='rightTwo2 clearfix' style=''>
+			<nav class='_navTwo _navTwo2 clearfix'>
+				<li class='_heatIndex'><a href="../nowHot/index.html">实时热点</a></li>
+				<li class="fl heatIndex navItem">
+		            <a href="../heatIndex/heatIndex.html">
+		               热度指数
+		            </a>
+		        </li>
+		        <li class="fl publicOpinionTrend navItem">
+		            <a href="../publicOpinionMonitor/publicOpinionTrend.html">
+	                 	主题监测
+		            </a>
+		        </li>
+		        <li class="fl eventStudy navItem">
+		            <a href="../eventStudy/eventSelect.html">
+		                事件分析
+		            </a>
+		        </li>
+		        <li class="fl competing navItem">
+		            <a href="../competing/competingOption.html">
+		                竞品分析
+		            </a>
+		        </li>
+		        <li class="fl navItem report">
+		            <a href="../report/reportIndex.html">
+		               	 数据报告
+		            </a>
+		        </li>
+		        <li class="fl navItem search">
+		            <a href="../search/searchIndex.html">
+		                全网搜索
+		            </a>
+		        </li>
+			</nav>
+			<!--<div class="landr">
+				<a href="./loginAndRegister/loginAndRegister.html">立即登录</a>
+				<a href="./apply/apply.html">申请试用</a>
+			</div>-->
+		</section>
+		<div class='headerNavCenter landr landr2'>
+			<i class='iconfont icon-iconfontgerenzhongxin'></i>
+			<img src="../images/center.gif" alt="" />
+			<a href="../userCenter/index.html" class='a1'>用户名</a>
+			<em class='iconfont icon-sign-out' style='' title='退出'></em>
+		</div>
+		
+	</section>
+</header>
+
+    <div class="main">
+        <div class="leftBar">
+	<div class="portrait-wrap">
+		<img src="../../images/default-portrait.jpg">
+		<p class="txt-c fs14">王美丽</p>
+	</div>
+	<ul class='menu-wrap'>
+		<li>
+			<i class="iconfont icon-zhanghu"></i>
+			<a href="./index.html">账户信息</a>
+		</li>
+		
+		<li>
+			<i class="iconfont icon-favorite"></i>
+			<a href="./collection.html">我的收藏</a>
+		</li>
+		<li>
+			<i class="iconfont icon-yujing"></i>
+			<a href="./autoWarning.html">自动预警设置</a>
+		</li>
+		<li>
+			<i class="iconfont icon-xinxiaoxi"></i>
+			<a href="./message.html">新消息设置</a>
+		</li>
+	</ul>
+</div>
+        <div class="main-wrap message-setting">
+            <div class="u-content-wrap mbl">
+                <h4 class="title-wrap"><i class="icon-circle iconfont"></i>新消息类别设置</h4>
+                <form class="layui-form mtl mbl">
+                    <span class="mll mrl fs14">提示框提醒：</span>
+                    <input type="checkbox" name="xxx" lay-skin="switch" checked lay-filter="switchTest" >
+                </form>
+            </div>
+            <div class="u-content-wrap warn-setting">
+                <h4 class="title-wrap"><i class="icon-circle iconfont"></i>新消息内容提醒设置</h4>
+                <form class="layui-form mtl mbl custom-form">
+                    <div class="form-item">
+                        <label class="form-label">媒体类型 :</label>
+                        <div class="form-input-block">
+                            <input type="radio" name="meiti" lay-filter="meitileixing" value="全部" title="全部" checked>
+                            <input type="radio" name="meiti" lay-filter="meitileixing" value="新闻" title="新闻">
+                            <input type="radio" name="meiti" lay-filter="meitileixing" value="微信" title="微信">
+                            <input type="radio" name="meiti" lay-filter="meitileixing" value="微博" title="微博">
+                            <input type="radio" name="meiti" lay-filter="meitileixing" value="论坛" title="论坛">
+                            <input type="radio" name="meiti" lay-filter="meitileixing" value="博客" title="博客">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label">情感类型 :</label>
+                        <div class="form-input-block">
+                            <input type="radio" name="qinggan" lay-filter="qingganleixing" value="全部" title="全部" checked>
+                            <input type="radio" name="qinggan" lay-filter="qingganleixing" value="正面" title="正面">
+                            <input type="radio" name="qinggan" lay-filter="qingganleixing" value="中性" title="中性">
+                            <input type="radio" name="qinggan" lay-filter="qingganleixing" value="负面" title="负面">
+                        </div>
+                    </div>
+                    <div class="txt-c">
+                        <button class="btn-submit">保存</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+     <div class="footerWhite2">
+	<!--<div class="footerWhite_con">
+		<ul>
+			<li class="active"><a href="../nowHot/index.html"><i>实时热点</i></a></li>
+				<li class="fl heatIndex navItem">
+		            <a href="../heatIndex/heatIndex.html">
+		               热度指数
+		            </a>
+		        </li>
+		        <li class="fl publicOpinionTrend navItem">
+		            <a href="../publicOpinionMonitor/publicOpinionTrend.html">
+	                 	主题监测
+		            </a>
+		        </li>
+		        <li class="fl eventStudy navItem">
+		            <a href="../eventStudy/eventSelect.html">
+		                事件分析
+		            </a>
+		        </li>
+		        <li class="fl competing navItem">
+		            <a href="../competing/competingOption.html">
+		                竞品分析
+		            </a>
+		        </li>
+		        <li class="fl navItem report">
+		            <a href="../report/reportIndex.html">
+		               	 数据报告
+		            </a>
+		        </li>
+		        <li class="fl navItem search">
+		            <a href="../search/searchIndex.html">
+		                全网搜索
+		            </a>
+		            <img src="../../images/footWhite.png" alt="" />
+		        </li>
+			
+		</ul>
+		
+		
+	</div>-->
+	<div class="foot-down">
+			<div class="footdown-con">
+				© 京ICP备12012279号 版权所有 九次方大数据信息集团有限公司
+			</div>
+		</div>
+</div>
+				
+</body>
+</html>
+<script src="../../Lib/jquery-1.12.4.min.js"></script>
+<script src="../../Lib/layui/layui.js"></script>
+<script src="../../js/public.js"></script>
+<script>
+    $(function(){
+        /*$(".leftBar .menu-wrap li").eq(4).addClass('active');*/
+        layui.use(['layer','form','laypage','laydate'], function(){
+            var form = layui.form;
+            form.on('switch(switchTest)', function(data){
+                console.log(this.checked ? 'true' : 'false');
+            });
+            form.on('radio(qingganleixing)', function(data){
+                console.log(this.value);
+            });
+            form.on('radio(meitileixing)', function(data){
+                console.log(this.value);
+            });
+        });
+    });
+</script>

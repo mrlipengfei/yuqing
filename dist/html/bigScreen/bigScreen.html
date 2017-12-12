@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>大数据情报服务平台</title>
+    <link rel="stylesheet" href="../../Lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../../Lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <style type="text/css">
+    	#_header2{
+    		top:-55px;
+    		left:0px;
+    		transition: .8s;
+    	}
+    	#_header2:hover{
+    		top:0px;
+    	}
+    </style>
+</head>
+<body class="bigScreen">
+	<!--header-->
+	<header id='_header2' style='background:rgba(0,0,0,.5)';>
+		<section class='_header_con'>
+			<section class='logoTwo'>
+				<a href="../index.html">
+					<img src="../../images/logo2.1.png" alt="" />
+				</a>
+			</section>
+			<section class='rightTwo'>
+				<nav class='_navTwo clearfix'>
+					<li class=""><a href="../index.html"><span class='iconfont icon-shouye shouye'></span><i>首页</i></a></li>
+					<li><a href="../product/product.html">产品与服务</a></li>
+					<li><a href="../api/api.html">API接口</a></li>
+					<li><a href="../aboutUs/aboutUs.html" class='fei-contact'>关于我们</a></li>
+				</nav>
+				<div class="landr">
+					<a href="../loginAndRegister/loginAndRegister.html">立即登录</a>
+					<a href="../apply/apply.html">申请试用</a>
+				</div>
+			</section>
+		</section>
+	</header>
+    <div class="body-bg">
+        <img class="bodyBgImg" src="../../images/darkBg3.jpg" />
+    </div>
+    <div class="bigScreenTitle">
+        舆情分析
+    </div>
+    <div class="bigScreenWrap">
+        <div class="bSTop">
+            <!--上 左-->
+            <div class="bSTopLeft">
+                <!--左上上 媒体分析-->
+                <div class="bSTopLeftTop">
+                    <h4 class="chartTileWrap clearfix">
+                        <div class="chartTitleSmall">
+                            <span class="titleIcon fl"></span>
+                            <span class="titleName fl">媒体分析</span>
+                        </div>
+                    </h4>
+                    <div class="chartBgSmall">
+                        <div class="chartWrap" id="bar"></div>
+                    </div>
+                </div>
+                <!--左上下 情感分布-->
+                <div class="bSTopLeftBottom">
+                    <h4 class="chartTileWrap clearfix">
+                        <div class="chartTitleSmall">
+                            <span class="titleIcon fl"></span>
+                            <span class="titleName fl">情感分布</span>
+                        </div>
+                    </h4>
+                    <div class="chartBgSmall">
+                        <div class="chartWrap" id="pie"></div>
+                    </div>
+                </div>
+            </div>
+            <!--上 中-->
+            <div class="bSTopMiddle">
+                <!--下拉框 日历-->
+                <form class="layui-form mapForm" action="">
+                    <div class="fl themeName">
+                        <select name="interest" lay-filter="themeName">
+                            <option value="0" selected="">一带一路会议</option>
+                            <option value="1">丝绸之路</option>
+                            <option value="2">北京</option>
+                        </select>
+                    </div>
+                    <div class="fl timeStart">
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input timeInput" id="startDate" placeholder="2017.07.01">
+                        </div>
+                    </div>
+                    <div class="fl midLine">-</div>
+                    <div class="fl timeEnd">
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input timeInput" id="endDate" placeholder="2017.08.01">
+                        </div>
+                    </div>
+                </form>
+                <!--地图-->
+                <div class="chartWrap" id="main"></div>
+            </div>
+            <!--上 右-->
+            <div class="bSTopRight">
+                <!--右上上 媒体来源排行-->
+                <div class="bSTopRightTop">
+                    <h4 class="chartTileWrap clearfix">
+                        <div class="chartTitleSmall">
+                            <span class="titleIcon fl"></span>
+                            <span class="titleName fl">媒体来源排行</span>
+                        </div>
+                    </h4>
+                    <div class="chartBgSmall">
+                        <div class="chartWrap" id="bar2"></div>
+                    </div>
+                </div>
+                <!--右上下 热词云-->
+                <div class="bSTopRightBottom">
+                    <h4 class="chartTileWrap clearfix">
+                        <div class="chartTitleSmall">
+                            <span class="titleIcon fl"></span>
+                            <span class="titleName fl">热词云</span>
+                        </div>
+                    </h4>
+                    <div class="chartBgSmall">
+                        <div class="chartWrap" id="hotWordCloud"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bSBottom">
+            <!--下 左 声量走势-->
+            <div class="bSBottomLeft chartBgBig">
+                <h4 class="chartTileWrap clearfix">
+                    <div class="chartTitleBig">
+                        <span class="titleIcon fl"></span>
+                        <span class="titleName fl">声量走势</span>
+                    </div>
+                </h4>
+                <div class="chartWrap" id="line"></div>
+            </div>
+            <!--下 右 情感走势-->
+            <div class="bSBottomRight chartBgBig">
+                <h4 class="chartTileWrap clearfix">
+                    <div class="chartTitleBig">
+                        <span class="titleIcon fl"></span>
+                        <span class="titleName fl">情感走势</span>
+                    </div>
+                </h4>
+                <div class="chartWrap" id="line2"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../../Lib/jquery-1.12.4.min.js"></script>
+<script src="../../Lib/layui/layui.js"></script>
+<script src="../../Lib/echarts.min.js"></script>
+<script src="../../js/bubbleChartWordCloud2.js"></script>
+<script src="../../js/main2.js"></script>
+<!--<script src="../../js/public.js"></script>-->
+<script src="../../js/bigScreen.js"></script>
+
+<script>
+   
+</script>
+
+

@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>热度指数</title>
+    <link rel="stylesheet" href="../../Lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../../Lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/common.css">
+</head>
+<body class="theme1 heatIndex">
+    <header id='_header2' class='_header3' style='background: rgba(0,0,0,1);position: static;margin-bottom:30px;'>
+	<section class='_header_con2'>
+		<section class='logoTwo logo2'>
+			<a href="../index.html">
+				<img src="../../images/logo2.1.png" alt="" />
+			</a>
+		</section>
+		<section class='rightTwo' style='display:none;'>
+			<nav class='_navTwo clearfix'>
+				<li class="active"><a href="###"><span class='iconfont icon-shouye shouye'></span><i>首页</i></a></li>
+				<li><a href="./product/product.html">产品与服务</a></li>
+				<li><a href="./api/api.html">API接口</a></li>
+				<li><a href="./aboutUs/aboutUs.html" class='fei-contact'>关于我们</a></li>
+			</nav>
+			<div class="landr">
+				<a href="./loginAndRegister/loginAndRegister.html">立即登录</a>
+				<a href="./apply/apply.html">申请试用</a>
+			</div>
+		</section>
+		<!--<a href="javascript:;" class='skin'>
+			<img src="../images/skin.gif" alt="" />
+		</a>-->
+
+		<section class='rightTwo2 clearfix' style=''>
+			<nav class='_navTwo _navTwo2 clearfix'>
+				<li class='_heatIndex'><a href="../nowHot/index.html">实时热点</a></li>
+				<li class="fl heatIndex navItem">
+		            <a href="../heatIndex/heatIndex.html">
+		               热度指数
+		            </a>
+		        </li>
+		        <li class="fl publicOpinionTrend navItem">
+		            <a href="../publicOpinionMonitor/publicOpinionTrend.html">
+	                 	主题监测
+		            </a>
+		        </li>
+		        <li class="fl eventStudy navItem">
+		            <a href="../eventStudy/eventSelect.html">
+		                事件分析
+		            </a>
+		        </li>
+		        <li class="fl competing navItem">
+		            <a href="../competing/competingOption.html">
+		                竞品分析
+		            </a>
+		        </li>
+		        <li class="fl navItem report">
+		            <a href="../report/reportIndex.html">
+		               	 数据报告
+		            </a>
+		        </li>
+		        <li class="fl navItem search">
+		            <a href="../search/searchIndex.html">
+		                全网搜索
+		            </a>
+		        </li>
+			</nav>
+			<!--<div class="landr">
+				<a href="./loginAndRegister/loginAndRegister.html">立即登录</a>
+				<a href="./apply/apply.html">申请试用</a>
+			</div>-->
+		</section>
+		<div class='headerNavCenter landr landr2'>
+			<i class='iconfont icon-iconfontgerenzhongxin'></i>
+			<img src="../images/center.gif" alt="" />
+			<a href="../userCenter/index.html" class='a1'>用户名</a>
+			<em class='iconfont icon-sign-out' style='' title='退出'></em>
+		</div>
+		
+	</section>
+</header>
+
+    <div class="main" style="overflow: hidden;">
+        <div class="leftBar">
+        	<h3 class="title">分类</h3>
+            <div class="category" id="category">
+                <div class="item active">
+                    <i class="iconfont icon-jiaoyu"></i>
+                    <a href="#">教育</a>
+                </div>
+                <div class="item">
+                    <i class="iconfont icon-star-empty"></i>
+                    <a href="#">明星</a>
+                </div>
+                <div class="item">
+                    <i class="iconfont icon-gupiao"></i>
+                    <a href="#">股票</a>
+                </div>
+                <div class="item">
+                    <i class="iconfont icon-yule"></i>
+                    <a href="#">娱乐</a>
+                </div>
+                <div class="item">
+                    <i class="iconfont icon-renwu"></i>
+                    <a href="#">人物</a>
+                </div>
+                <div class="item">
+                    <i class="iconfont icon-qiche"></i>
+                    <a href="#">汽车</a>
+                </div>
+                <div class="item">
+                    <i class="iconfont icon-shouji"></i>
+                    <a href="#">手机</a>
+                </div>
+                <div class="item">
+                    <i class="iconfont icon-jingqu"></i>
+                    <a href="#">景区</a>
+                </div>
+                <div class="item">
+                    <i class="iconfont icon-diannao"></i>
+                    <a href="#">电脑</a>
+                </div>
+                <div class="item">
+                    <i class="iconfont icon-jiadian"></i>
+                    <a href="#">家电</a>
+                </div>
+                <div class="item">
+                    <i class="iconfont icon-shipin"></i>
+                    <a href="#">食品</a>
+                </div>
+                <div class="item">
+                    <i class="iconfont icon-meizhuang"></i>
+                    <a href="#">美妆</a>
+                </div>
+                <div class="item">
+                    <i class="iconfont icon-jinrong"></i>
+                    <a href="#">金融</a>
+                </div>
+                <div class="item">
+                    <i class="iconfont icon-hot"></i>
+                    <a href="#">热点</a>
+                </div>
+            </div>
+        </div>
+        <div class="mainCon">
+        	<div class="search-wrap">
+                <span>热度指数</span>
+                <div class="search-group">
+                    <input type="text" class="search-txt" name='bbb'>
+                    <i class="iconfont icon-sousuo" id="searchIcon"></i>
+                </div>
+            </div>
+            <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+                <div class="title">
+                    教育榜：
+                </div>
+                <ul class="layui-tab-title">
+                    <li class="layui-this">全部</li>
+                    <li>充值</li>
+                    <li>支出</li>
+                </ul>
+                <div class="layui-tab-content">
+                    <div class="layui-tab-item layui-show">
+                        <table class="layui-table" lay-skin="nob" lay-even >
+                            <colgroup>
+                                <col width="80">
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th></th>
+                                <th class="text-left"><span class="empty"></span>名称</th>
+                                <th>热度指数<i class="jiantouxia"></i></th>
+                                <th>
+                                    <div class="sort-group asc">
+                                        <span class="fl">指数变化</span>
+                                        <div class="sort">
+                                            <i class="sanjiao up"></i>
+                                            <i class="sanjiao down"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="sort-group desc">
+                                        <span class="fl">全网信息量</span>
+                                        <div class="sort">
+                                            <i class="sanjiao up"></i>
+                                            <i class="sanjiao down"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th >
+                                    <div class="sort-group">
+                                        <span class="fl">排名变化</span>
+                                        <div class="sort">
+                                            <i class="sanjiao up"></i>
+                                            <i class="sanjiao down"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                               
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="no-num">1</td>
+                                <td class="name"><img src="../../images/school.png">清华大学</td>
+                                <td>36</td>
+                                <td><span class="green">-1.71</span></td>
+                                <td>24356</td>
+                                <td><span class="green">-12</span></td>
+                               
+                            </tr>
+                            <tr>
+                                <td class="no-num">2</td>
+                                <td class="name"><img src="../../images/school.png">清华大学</td>
+                                <td>36</td>
+                                <td><span class="green">-1.71</span></td>
+                                <td>24356</td>
+                                <td><span class="green">-1</span></td>
+                               
+                            </tr>
+                            <tr>
+                                <td class="no-num">3</td>
+                                <td class="name"><img src="../../images/school.png"> 清华大学</td>
+                                <td>36</td>
+                                <td><span class="red">3.71</span></td>
+                                <td>24356</td>
+                                <td><span class="red">+1</span></td>
+                               
+                            </tr>
+                            <tr>
+                                <td class="no-num">4</td>
+                                <td class="name"><img src="../../images/school.png">清华大学</td>
+                                <td>36</td>
+                                <td><span class="red">3.71</span></td>
+                                <td>24356</td>
+                                <td>--</td>
+                               
+                            </tr>
+                            <tr>
+                                <td class="no-num">5</td>
+                                <td class="name"><img src="../../images/school.png"> 清华大学</td>
+                                <td>36</td>
+                                <td><span class="green">-1.71</span></td>
+                                <td>24356</td>
+                                <td><span class="green">-12</span></td>
+                              
+                            </tr>
+                            <tr>
+                                <td class="no-num">6</td>
+                                <td class="name"><img src="../../images/school.png">清华大学</td>
+                                <td>36</td>
+                                <td><span class="green">-1.71</span></td>
+                                <td>24356</td>
+                                <td><span class="green">-1</span></td>
+                              
+                            </tr>
+                            <tr>
+                                <td class="no-num">7</td>
+                                <td class="name"><img src="../../images/school.png"> 清华大学</td>
+                                <td>36</td>
+                                <td><span class="red">3.71</span></td>
+                                <td>24356</td>
+                                <td><span class="red">+1</span></td>
+                             
+                            </tr>
+                            <tr>
+                                <td class="no-num">8</td>
+                                <td class="name"><img src="../../images/school.png">清华大学</td>
+                                <td>36</td>
+                                <td><span class="red">3.71</span></td>
+                                <td>24356</td>
+                                <td>--</td>
+                               
+                            </tr>
+                            <tr>
+                                <td class="no-num">9</td>
+                                <td class="name"><img src="../../images/school.png">清华大学</td>
+                                <td>36</td>
+                                <td><span class="green">-1.71</span></td>
+                                <td>24356</td>
+                                <td><span class="green">-1</span></td>
+                               
+                            </tr>
+                            <tr>
+                                <td class="no-num">10</td>
+                                <td class="name"><img src="../../images/school.png"> 清华大学</td>
+                                <td>36</td>
+                                <td><span class="red">3.71</span></td>
+                                <td>24356</td>
+                                <td><span class="red">+1</span></td>
+                                
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="pageWrap clearfix">
+                            <div class="totalPage fl">
+                                共<span>333</span>页 / 3333条记录
+                            </div>
+                            <div id="page" class="fr page"></div>
+                        </div>
+                    </div>
+                    <div class="layui-tab-item">
+                        <table class="layui-table" lay-skin="nob" lay-even >
+                            <colgroup>
+                                <col width="80">
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th></th>
+                                <th class="text-left"><span class="empty"></span>名称</th>
+                                <th>热度指数<i class="jiantouxia"></i></th>
+                                <th>
+                                    <div class="sort-group asc">
+                                        <span class="fl">指数变化</span>
+                                        <div class="sort">
+                                            <i class="sanjiao up"></i>
+                                            <i class="sanjiao down"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="sort-group desc">
+                                        <span class="fl">全网信息量</span>
+                                        <div class="sort">
+                                            <i class="sanjiao up"></i>
+                                            <i class="sanjiao down"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th >
+                                    <div class="sort-group">
+                                        <span class="fl">排名变化</span>
+                                        <div class="sort">
+                                            <i class="sanjiao up"></i>
+                                            <i class="sanjiao down"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th >省份</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="no-num">1</td>
+                                <td class="name"><img src="../../images/school.png">清华大学</td>
+                                <td>36</td>
+                                <td><span class="green">-1.71</span></td>
+                                <td>24356</td>
+                                <td><span class="green">-12</span></td>
+                                <td>北京</td>
+                            </tr>
+                            <tr>
+                                <td class="no-num">2</td>
+                                <td class="name"><img src="../../images/school.png">清华大学</td>
+                                <td>36</td>
+                                <td><span class="green">-1.71</span></td>
+                                <td>24356</td>
+                                <td><span class="green">-1</span></td>
+                                <td>北京</td>
+                            </tr>
+                            <tr>
+                                <td class="no-num">3</td>
+                                <td class="name"><img src="../../images/school.png"> 清华大学</td>
+                                <td>36</td>
+                                <td><span class="red">3.71</span></td>
+                                <td>24356</td>
+                                <td><span class="red">+1</span></td>
+                                <td>北京</td>
+                            </tr>
+                            <tr>
+                                <td class="no-num">4</td>
+                                <td class="name"><img src="../../images/school.png">清华大学</td>
+                                <td>36</td>
+                                <td><span class="red">3.71</span></td>
+                                <td>24356</td>
+                                <td>--</td>
+                                <td>北京</td>
+                            </tr>
+                            <tr>
+                                <td class="no-num">5</td>
+                                <td class="name"><img src="../../images/school.png"> 清华大学</td>
+                                <td>36</td>
+                                <td><span class="green">-1.71</span></td>
+                                <td>24356</td>
+                                <td><span class="green">-12</span></td>
+                                <td>北京</td>
+                            </tr>
+                            <tr>
+                                <td class="no-num">6</td>
+                                <td class="name"><img src="../../images/school.png">清华大学</td>
+                                <td>36</td>
+                                <td><span class="green">-1.71</span></td>
+                                <td>24356</td>
+                                <td><span class="green">-1</span></td>
+                                <td>北京</td>
+                            </tr>
+                            <tr>
+                                <td class="no-num">7</td>
+                                <td class="name"><img src="../../images/school.png"> 清华大学</td>
+                                <td>36</td>
+                                <td><span class="red">3.71</span></td>
+                                <td>24356</td>
+                                <td><span class="red">+1</span></td>
+                                <td>北京</td>
+                            </tr>
+                            <tr>
+                                <td class="no-num">8</td>
+                                <td class="name"><img src="../../images/school.png">清华大学</td>
+                                <td>36</td>
+                                <td><span class="red">3.71</span></td>
+                                <td>24356</td>
+                                <td>--</td>
+                                <td>北京</td>
+                            </tr>
+                            <tr>
+                                <td class="no-num">9</td>
+                                <td class="name"><img src="../../images/school.png">清华大学</td>
+                                <td>36</td>
+                                <td><span class="green">-1.71</span></td>
+                                <td>24356</td>
+                                <td><span class="green">-1</span></td>
+                                <td>北京</td>
+                            </tr>
+                            <tr>
+                                <td class="no-num">10</td>
+                                <td class="name"><img src="../../images/school.png"> 清华大学</td>
+                                <td>36</td>
+                                <td><span class="red">3.71</span></td>
+                                <td>24356</td>
+                                <td><span class="red">+1</span></td>
+                                <td>北京</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="pageWrap clearfix">
+                            <div class="totalPage fl">
+                                共<span>333</span>页 / 3333条记录
+                            </div>
+                            <div id="page" class="fr page"></div>
+                        </div>
+                    </div>
+                    <div class="layui-tab-item">
+                        <table class="layui-table" lay-skin="nob" lay-even >
+                            <colgroup>
+                                <col width="80">
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th></th>
+                                <th class="text-left"><span class="empty"></span>名称</th>
+                                <th>热度指数<i class="jiantouxia"></i></th>
+                                <th>
+                                    <div class="sort-group asc">
+                                        <span class="fl">指数变化</span>
+                                        <div class="sort">
+                                            <i class="sanjiao up"></i>
+                                            <i class="sanjiao down"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="sort-group desc">
+                                        <span class="fl">全网信息量</span>
+                                        <div class="sort">
+                                            <i class="sanjiao up"></i>
+                                            <i class="sanjiao down"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th >
+                                    <div class="sort-group">
+                                        <span class="fl">排名变化</span>
+                                        <div class="sort">
+                                            <i class="sanjiao up"></i>
+                                            <i class="sanjiao down"></i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th >省份</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="no-num">1</td>
+                                <td class="name"><img src="../../images/school.png">清华大学</td>
+                                <td>36</td>
+                                <td><span class="green">-1.71</span></td>
+                                <td>24356</td>
+                                <td><span class="green">-12</span></td>
+                                <td>北京</td>
+                            </tr>
+                            <tr>
+                                <td class="no-num">2</td>
+                                <td class="name"><img src="../../images/school.png">清华大学</td>
+                                <td>36</td>
+                                <td><span class="green">-1.71</span></td>
+                                <td>24356</td>
+                                <td><span class="green">-1</span></td>
+                                <td>北京</td>
+                            </tr>
+                            <tr>
+                                <td class="no-num">3</td>
+                                <td class="name"><img src="../../images/school.png"> 清华大学</td>
+                                <td>36</td>
+                                <td><span class="red">3.71</span></td>
+                                <td>24356</td>
+                                <td><span class="red">+1</span></td>
+                                <td>北京</td>
+                            </tr>
+                            <tr>
+                                <td class="no-num">4</td>
+                                <td class="name"><img src="../../images/school.png">清华大学</td>
+                                <td>36</td>
+                                <td><span class="red">3.71</span></td>
+                                <td>24356</td>
+                                <td>--</td>
+                                <td>北京</td>
+                            </tr>
+                            <tr>
+                                <td class="no-num">5</td>
+                                <td class="name"><img src="../../images/school.png"> 清华大学</td>
+                                <td>36</td>
+                                <td><span class="green">-1.71</span></td>
+                                <td>24356</td>
+                                <td><span class="green">-12</span></td>
+                                <td>北京</td>
+                            </tr>
+                            <tr>
+                                <td class="no-num">6</td>
+                                <td class="name"><img src="../../images/school.png">清华大学</td>
+                                <td>36</td>
+                                <td><span class="green">-1.71</span></td>
+                                <td>24356</td>
+                                <td><span class="green">-1</span></td>
+                                <td>北京</td>
+                            </tr>
+                            <tr>
+                                <td class="no-num">7</td>
+                                <td class="name"><img src="../../images/school.png"> 清华大学</td>
+                                <td>36</td>
+                                <td><span class="red">3.71</span></td>
+                                <td>24356</td>
+                                <td><span class="red">+1</span></td>
+                                <td>北京</td>
+                            </tr>
+                            <tr>
+                                <td class="no-num">8</td>
+                                <td class="name"><img src="../../images/school.png">清华大学</td>
+                                <td>36</td>
+                                <td><span class="red">3.71</span></td>
+                                <td>24356</td>
+                                <td>--</td>
+                                <td>北京</td>
+                            </tr>
+                            <tr>
+                                <td class="no-num">9</td>
+                                <td class="name"><img src="../../images/school.png">清华大学</td>
+                                <td>36</td>
+                                <td><span class="green">-1.71</span></td>
+                                <td>24356</td>
+                                <td><span class="green">-1</span></td>
+                                <td>北京</td>
+                            </tr>
+                            <tr>
+                                <td class="no-num">10</td>
+                                <td class="name"><img src="../../images/school.png"> 清华大学</td>
+                                <td>36</td>
+                                <td><span class="red">3.71</span></td>
+                                <td>24356</td>
+                                <td><span class="red">+1</span></td>
+                                <td>北京</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="pageWrap clearfix">
+                            <div class="totalPage fl">
+                                共<span>333</span>页 / 3333条记录
+                            </div>
+                            <div id="page" class="fr page"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!--loading-->
+	<div class="loadEffect">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+    <!--footer-->
+	 <div class="footerWhite2">
+	<!--<div class="footerWhite_con">
+		<ul>
+			<li class="active"><a href="../nowHot/index.html"><i>实时热点</i></a></li>
+				<li class="fl heatIndex navItem">
+		            <a href="../heatIndex/heatIndex.html">
+		               热度指数
+		            </a>
+		        </li>
+		        <li class="fl publicOpinionTrend navItem">
+		            <a href="../publicOpinionMonitor/publicOpinionTrend.html">
+	                 	主题监测
+		            </a>
+		        </li>
+		        <li class="fl eventStudy navItem">
+		            <a href="../eventStudy/eventSelect.html">
+		                事件分析
+		            </a>
+		        </li>
+		        <li class="fl competing navItem">
+		            <a href="../competing/competingOption.html">
+		                竞品分析
+		            </a>
+		        </li>
+		        <li class="fl navItem report">
+		            <a href="../report/reportIndex.html">
+		               	 数据报告
+		            </a>
+		        </li>
+		        <li class="fl navItem search">
+		            <a href="../search/searchIndex.html">
+		                全网搜索
+		            </a>
+		            <img src="../../images/footWhite.png" alt="" />
+		        </li>
+			
+		</ul>
+		
+		
+	</div>-->
+	<div class="foot-down">
+			<div class="footdown-con">
+				© 京ICP备12012279号 版权所有 九次方大数据信息集团有限公司
+			</div>
+		</div>
+</div>
+				
+</body>
+</html>
+<script src="../../Lib/jquery-1.12.4.min.js"></script>
+<script src="../../Lib/layui/layui.js"></script>
+<script src="../../js/public.js"></script>
+<script>
+  $(function(){
+      layui.use(['layer','form','laypage','element'], function(){
+          var laypage = layui.laypage;
+          laypage.render({
+              elem: 'page',
+              count: 100,
+              layout: ['prev', 'page', 'next', 'skip'],
+              last:false,
+              first:false,
+              prev:'<',
+              next:'>',
+              theme:'#4ea5ff',
+              jump: function(obj){
+                  console.log(obj)
+              }
+          });
+
+      });
+
+      //分类切换
+      $("#category .item").on('click',function(){
+          $(this).addClass('active').siblings().removeClass('active');
+      });
+
+      //搜索
+      $("#searchIcon").on('click',function(){
+          $("#category .item").removeClass('active');
+      });
+
+      //二级切换
+      $(".sub-tab li").on('click',function(){
+          $(this).addClass('active').siblings().removeClass('active');
+      });
+
+      //排序点击
+      $(".layui-table .sort-group").on('click',function(){
+          if($(this).hasClass('desc')){
+              $(this).removeClass('desc').addClass('asc');
+          } else if($(this).hasClass('asc')){
+              $(this).removeClass('asc').addClass('desc');
+          } else {
+              $(this).addClass('asc');
+          }
+      });
+  });
+</script>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>词云</title>
+		 <style>
+        	#myChart{width:364px;height:305px;}
+	    </style>
+	    <script src="../../Lib/echarts-all-2.js"></script>
+	</head>
+	<body>
+		<div id="myChart"></div>
+	</body>
+</html>
+<script>
+	/*var data;
+	if(jieshou == 1){
+		data = data1
+	}*/
+	function createRandomItemStyle() {
+	    return {
+	        normal: {
+	            color: 'rgb(' + [
+	                Math.round(Math.random() * 160),
+	                Math.round(Math.random() * 160),
+	                Math.round(Math.random() * 160)
+	            ].join(',') + ')'
+	        }
+	    };
+	}
+	function keyWords(){
+        /*var colors=['#ff7234',"#62a0f3","#404450"];
+        for(var i=0; i<data.length; i++){
+            data[i].itemStyle={ normal:{color:colors[i%3]}};
+        }
+*/
+        var myChart = echarts.init(document.getElementById('myChart'));
+
+        
+
+
+		option = {
+			bottom:0,
+		    
+		    tooltip: {
+		        show: true
+		    },
+		    series: [{
+		        name: 'Google Trends',
+		        type: 'wordCloud',
+		        bottom:'0%',
+		        size: ['100%', '95%'],
+		        textRotation : [0, 45, 90, -45],
+		        textPadding: 5,
+		        autoSize: {
+		            enable: true,
+		            minSize: 14
+		        },
+		        itemStyle: {
+		                    normal: {
+		                        color: '#34c1ea'
+		                    }
+		               },
+		        data: [
+		            {
+		                name: "北京",
+		                value: 8000
+		                /*itemStyle: {
+		                    normal: {
+		                        color: 'black'
+		                    }
+		                }*/
+		            },
+		            {
+		                name: "天津",
+		                value: 5000,
+		                
+		            },
+		            {
+		                name: "上海",
+		                value: 4000,
+		                
+		            },
+		            {
+		                name: "洛杉矶",
+		                value: 3000,
+		                
+		            },
+		            {
+		                name: "美国",
+		                value: 2467,
+		                
+		            },
+		            {
+		                name: "人民大会堂",
+		                value: 2244,
+		                
+		            },
+		            {
+		                name: "英国",
+		                value: 1898,
+		                
+		            },
+		            {
+		                name: "伦敦",
+		                value: 1484,
+		                
+		            },
+		            {
+		                name: "圆明园",
+		                value: 1112,
+		                
+		            },
+		            {
+		                name: "长城",
+		                value: 965,
+		                
+		            },
+		            {
+		                name: "故宫",
+		                value: 847,
+		                
+		            },
+		            {
+		                name: "巴黎",
+		                value: 582,
+		                
+		            },
+		            {
+		                name: "慕尼黑",
+		                value: 555,
+		                
+		            },
+		            {
+		                name: "河南",
+		                value: 550,
+		                
+		            },
+		            {
+		                name: "广州",
+		                value: 462,
+		                
+		            },
+		            {
+		                name: "黄山",
+		                value: 366,
+		                
+		            },
+		            {
+		                name: "故宫",
+		                value: 360,
+		                
+		            },
+		            {
+		                name: "长城",
+		                value: 282,
+		                
+		            }
+		            
+		        ]
+		    }]
+		};
+                    
+        myChart.setOption(option);
+    }
+	keyWords()
+</script>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>词云</title>
+		 <style>
+        	#myChart{width:690px;height:340px;margin:0 auto;}
+	    </style>
+	    <script src="../../Lib/echarts-all-2.js"></script>
+	</head>
+	<body>
+		<div id="myChart"></div>
+	</body>
+</html>
+<script>
+	/*var data;
+	if(jieshou == 1){
+		data = data1
+	}*/
+	function createRandomItemStyle() {
+	    return {
+	        normal: {
+	            color: 'rgb(' + [
+	                Math.round(Math.random() * 160),
+	                Math.round(Math.random() * 160),
+	                Math.round(Math.random() * 160)
+	            ].join(',') + ')'
+	        }
+	    };
+	}
+	function keyWords(){
+        /*var colors=['#ff7234',"#62a0f3","#404450"];
+        for(var i=0; i<data.length; i++){
+            data[i].itemStyle={ normal:{color:colors[i%3]}};
+        }
+*/
+        var myChart = echarts.init(document.getElementById('myChart'));
+
+        
+
+
+		option = {
+			bottom:0,
+		   /* title: {
+		        text: '人名',
+		        link: 'http://www.google.com/trends/hottrends',
+		        x: 'center',
+		        y:'top'
+		    },*/
+		    tooltip: {
+		        show: true
+		    },
+		    series: [{
+		        name: 'Google Trends',
+		        type: 'wordCloud',
+		        bottom:'0%',
+		        size: ['100%', '95%'],
+		        textRotation : [0, 45, 90, -45],
+		        textPadding: 5,
+		        autoSize: {
+		            enable: true,
+		            minSize: 14
+		        },
+		        data: [
+		            {
+		                name: "习近平",
+		                value: 8000
+		                /*itemStyle: {
+		                    normal: {
+		                        color: 'black'
+		                    }
+		                }*/
+		            },
+		            {
+		                name: "特朗普",
+		                value: 5000,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "彭丽媛",
+		                value: 4000,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "尼克松",
+		                value: 3000,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "小布什",
+		                value: 2467,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "奥巴马",
+		                value: 2244,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "阿拉贝拉",
+		                value: 1898,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "贝克汉姆",
+		                value: 1484,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "姚明",
+		                value: 1112,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "江泽民",
+		                value: 965,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "朱镕基",
+		                value: 847,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "李鹏",
+		                value: 582,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "梁家辉",
+		                value: 555,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "习近平",
+		                value: 550,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "温家宝",
+		                value: 462,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "李克强",
+		                value: 366,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "小王",
+		                value: 360,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "撒贝宁",
+		                value: 282,
+		                itemStyle: createRandomItemStyle()
+		            },{
+		                name: "天津",
+		                value: 5000,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "上海",
+		                value: 4000,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "洛杉矶",
+		                value: 3000,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "美国",
+		                value: 2467,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "人民大会堂",
+		                value: 2244,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "英国",
+		                value: 1898,
+		                itemStyle: createRandomItemStyle()
+		            },{
+		                name: "印度",
+		                value: 1112,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "公安局",
+		                value: 965,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "能源",
+		                value: 847,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "投资",
+		                value: 582,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "开发",
+		                value: 555,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "品质",
+		                value: 550,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "教育局",
+		                value: 462,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "幼儿园",
+		                value: 366,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "国务院",
+		                value: 360,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "地质局",
+		                value: 282,
+		                itemStyle: createRandomItemStyle()
+		            },{
+		                name: "河南",
+		                value: 550,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "广州",
+		                value: 462,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "黄山",
+		                value: 366,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "故宫",
+		                value: 360,
+		                itemStyle: createRandomItemStyle()
+		            },
+		            {
+		                name: "长城",
+		                value: 282,
+		                itemStyle: createRandomItemStyle()
+		            }
+		            
+		        ]
+		    }]
+		};
+                    
+        myChart.setOption(option);
+    }
+	keyWords()
+</script>

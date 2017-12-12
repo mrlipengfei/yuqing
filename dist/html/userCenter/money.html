@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>个人中心-账户余额</title>
+    <link rel="stylesheet" href="../../Lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../../Lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/common.css">
+</head>
+<body class="theme1 userCenter">
+    <header id='_header2' class='_header3' style='background: rgba(0,0,0,1);position: static;margin-bottom:30px;'>
+	<section class='_header_con2'>
+		<section class='logoTwo logo2'>
+			<a href="../index.html">
+				<img src="../../images/logo2.1.png" alt="" />
+			</a>
+		</section>
+		<section class='rightTwo' style='display:none;'>
+			<nav class='_navTwo clearfix'>
+				<li class="active"><a href="###"><span class='iconfont icon-shouye shouye'></span><i>首页</i></a></li>
+				<li><a href="./product/product.html">产品与服务</a></li>
+				<li><a href="./api/api.html">API接口</a></li>
+				<li><a href="./aboutUs/aboutUs.html" class='fei-contact'>关于我们</a></li>
+			</nav>
+			<div class="landr">
+				<a href="./loginAndRegister/loginAndRegister.html">立即登录</a>
+				<a href="./apply/apply.html">申请试用</a>
+			</div>
+		</section>
+		<!--<a href="javascript:;" class='skin'>
+			<img src="../images/skin.gif" alt="" />
+		</a>-->
+
+		<section class='rightTwo2 clearfix' style=''>
+			<nav class='_navTwo _navTwo2 clearfix'>
+				<li class='_heatIndex'><a href="../nowHot/index.html">实时热点</a></li>
+				<li class="fl heatIndex navItem">
+		            <a href="../heatIndex/heatIndex.html">
+		               热度指数
+		            </a>
+		        </li>
+		        <li class="fl publicOpinionTrend navItem">
+		            <a href="../publicOpinionMonitor/publicOpinionTrend.html">
+	                 	主题监测
+		            </a>
+		        </li>
+		        <li class="fl eventStudy navItem">
+		            <a href="../eventStudy/eventSelect.html">
+		                事件分析
+		            </a>
+		        </li>
+		        <li class="fl competing navItem">
+		            <a href="../competing/competingOption.html">
+		                竞品分析
+		            </a>
+		        </li>
+		        <li class="fl navItem report">
+		            <a href="../report/reportIndex.html">
+		               	 数据报告
+		            </a>
+		        </li>
+		        <li class="fl navItem search">
+		            <a href="../search/searchIndex.html">
+		                全网搜索
+		            </a>
+		        </li>
+			</nav>
+			<!--<div class="landr">
+				<a href="./loginAndRegister/loginAndRegister.html">立即登录</a>
+				<a href="./apply/apply.html">申请试用</a>
+			</div>-->
+		</section>
+		<div class='headerNavCenter landr landr2'>
+			<i class='iconfont icon-iconfontgerenzhongxin'></i>
+			<img src="../images/center.gif" alt="" />
+			<a href="../userCenter/index.html" class='a1'>用户名</a>
+			<em class='iconfont icon-sign-out' style='' title='退出'></em>
+		</div>
+		
+	</section>
+</header>
+
+    <div class="main">
+        <div class="leftBar">
+	<div class="portrait-wrap">
+		<img src="../../images/default-portrait.jpg">
+		<p class="txt-c fs14">王美丽</p>
+	</div>
+	<ul class='menu-wrap'>
+		<li>
+			<i class="iconfont icon-zhanghu"></i>
+			<a href="./index.html">账户信息</a>
+		</li>
+		
+		<li>
+			<i class="iconfont icon-favorite"></i>
+			<a href="./collection.html">我的收藏</a>
+		</li>
+		<li>
+			<i class="iconfont icon-yujing"></i>
+			<a href="./autoWarning.html">自动预警设置</a>
+		</li>
+		<li>
+			<i class="iconfont icon-xinxiaoxi"></i>
+			<a href="./message.html">新消息设置</a>
+		</li>
+	</ul>
+</div>
+        <div class="main-wrap user-money">
+            <div class="u-content-wrap mbl">
+                <h4 class="title-wrap"><i class="icon-circle iconfont"></i>账户余额</h4>
+                <p>
+                    <span class="mll">可用余额</span>
+                    <span class="mll fs24 money-color">0.00</span>元
+                    <button class="mll btn-submit mtl" id="btnAccountPay">账户充值</button>
+                </p>
+            </div>
+            <div class="u-content-wrap mbl">
+                <h4 class="title-wrap"><i class="icon-circle iconfont"></i>账户余额</h4>
+                <div class="panel-wrap">
+                    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+                        <ul class="layui-tab-title">
+                            <li class="layui-this">全部</li>
+                            <li>充值</li>
+                            <li>支出</li>
+                        </ul>
+                        <div class="layui-tab-content">
+                            <div class="layui-tab-item layui-show">
+                                <div class="fixed-wrap">
+                                    <table class="layui-table" lay-skin="nob" lay-even="">
+                                    <thead>
+                                        <tr>
+                                            <th>订单号</th>
+                                            <th>时间</th>
+                                            <th>充值(元)</th>
+                                            <th>支出(元)</th>
+                                            <th>当前余额(元)</th>
+                                            <th>交易渠道</th>
+                                            <th>交易状态</th>
+                                            <th>说明</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>1000.00</td>
+                                            <td>194.04</td>
+                                            <td>1000.00</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-fail">交易失败</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>1000.00</td>
+                                            <td>194.04</td>
+                                            <td>1000.00</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-success">交易成功</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>1000.00</td>
+                                            <td>194.04</td>
+                                            <td>1000.00</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-success">交易成功</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>1000.00</td>
+                                            <td>194.04</td>
+                                            <td>1000.00</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-success">交易成功</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>1000.00</td>
+                                            <td>194.04</td>
+                                            <td>1000.00</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-success">交易成功</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>1000.00</td>
+                                            <td>194.04</td>
+                                            <td>1000.00</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-fail">交易失败</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                                <div class="txt-c mts">
+                                    <i class="iconfont icon-bottom-arrows table-open"></i>
+                                    <!--<i class="iconfont icon-bottom-arrows table-close"></i>-->
+                                </div>
+                            </div>
+                            <div class="layui-tab-item">
+                                <div class="fixed-wrap">
+                                    <table class="layui-table" lay-skin="nob" lay-even="">
+                                        <thead>
+                                        <tr>
+                                            <th>订单号</th>
+                                            <th>时间</th>
+                                            <th>充值(元)</th>
+                                            <th>支出(元)</th>
+                                            <th>当前余额(元)</th>
+                                            <th>交易渠道</th>
+                                            <th>交易状态</th>
+                                            <th>说明</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>1000.00</td>
+                                            <td>194.04</td>
+                                            <td>1000.00</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-fail">交易失败</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>1000.00</td>
+                                            <td>194.04</td>
+                                            <td>1000.00</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-success">交易成功</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>1000.00</td>
+                                            <td>194.04</td>
+                                            <td>1000.00</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-success">交易成功</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>1000.00</td>
+                                            <td>194.04</td>
+                                            <td>1000.00</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-success">交易成功</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>1000.00</td>
+                                            <td>194.04</td>
+                                            <td>1000.00</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-success">交易成功</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>1000.00</td>
+                                            <td>194.04</td>
+                                            <td>1000.00</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-fail">交易失败</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="txt-c mts">
+                                    <i class="iconfont icon-bottom-arrows table-open"></i>
+                                    <!--<i class="iconfont icon-bottom-arrows table-close"></i>-->
+                                </div>
+                            </div>
+                            <div class="layui-tab-item">
+                                <div class="fixed-wrap">
+                                    <table class="layui-table" lay-skin="nob" lay-even="">
+                                        <thead>
+                                        <tr>
+                                            <th>订单号</th>
+                                            <th>时间</th>
+                                            <th>充值(元)</th>
+                                            <th>支出(元)</th>
+                                            <th>当前余额(元)</th>
+                                            <th>交易渠道</th>
+                                            <th>交易状态</th>
+                                            <th>说明</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>1000.00</td>
+                                            <td>194.04</td>
+                                            <td>1000.00</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-fail">交易失败</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>1000.00</td>
+                                            <td>194.04</td>
+                                            <td>1000.00</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-success">交易成功</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>1000.00</td>
+                                            <td>194.04</td>
+                                            <td>1000.00</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-success">交易成功</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>1000.00</td>
+                                            <td>194.04</td>
+                                            <td>1000.00</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-success">交易成功</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>1000.00</td>
+                                            <td>194.04</td>
+                                            <td>1000.00</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-success">交易成功</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>1000.00</td>
+                                            <td>194.04</td>
+                                            <td>1000.00</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-fail">交易失败</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="txt-c mts">
+                                    <i class="iconfont icon-bottom-arrows table-open"></i>
+                                    <!--<i class="iconfont icon-bottom-arrows table-close"></i>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="u-content-wrap">
+                <h4 class="title-wrap"><i class="icon-circle iconfont"></i>详细消费记录</h4>
+                <div class="panel-wrap">
+                    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+                        <ul class="layui-tab-title">
+                            <li class="layui-this">事件分析</li>
+                            <li>竞品分析</li>
+                            <li>主题购买</li>
+                        </ul>
+                        <div class="layui-tab-content">
+                            <div class="layui-tab-item layui-show">
+                                <div class="fixed-wrap">
+                                    <table class="layui-table" lay-skin="nob" lay-even="">
+                                        <thead>
+                                        <tr>
+                                            <th>订单号</th>
+                                            <th>时间</th>
+                                            <th>交易渠道</th>
+                                            <th>交易状态</th>
+                                            <th>说明</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-success">交易成功</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-success">交易成功</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-success">交易成功</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-fail">交易失败</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-fail">交易失败</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="txt-c mts">
+                                    <i class="iconfont icon-bottom-arrows table-open"></i>
+                                    <!--<i class="iconfont icon-bottom-arrows table-close"></i>-->
+                                </div>
+                            </div>
+                            <div class="layui-tab-item">
+                                <div class="fixed-wrap">
+                                    <table class="layui-table" lay-skin="nob" lay-even="">
+                                        <thead>
+                                        <tr>
+                                            <th>订单号</th>
+                                            <th>时间</th>
+                                            <th>交易渠道</th>
+                                            <th>交易状态</th>
+                                            <th>说明</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-success">交易成功</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-success">交易成功</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-success">交易成功</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-fail">交易失败</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-fail">交易失败</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="txt-c mts">
+                                    <i class="iconfont icon-bottom-arrows table-open"></i>
+                                    <!--<i class="iconfont icon-bottom-arrows table-close"></i>-->
+                                </div>
+                            </div>
+                            <div class="layui-tab-item">
+                                <div class="fixed-wrap">
+                                    <table class="layui-table" lay-skin="nob" lay-even="">
+                                        <thead>
+                                        <tr>
+                                            <th>订单号</th>
+                                            <th>时间</th>
+                                            <th>交易渠道</th>
+                                            <th>交易状态</th>
+                                            <th>说明</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-success">交易成功</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-success">交易成功</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-success">交易成功</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-fail">交易失败</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        <tr>
+                                            <td>201608020935578851</td>
+                                            <td>2016-07-28 04:16:58</td>
+                                            <td>微信支付</td>
+                                            <td><span class="txt-fail">交易失败</span></td>
+                                            <td>账户支付</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="txt-c mts">
+                                    <i class="iconfont icon-bottom-arrows table-open"></i>
+                                    <!--<i class="iconfont icon-bottom-arrows table-close"></i>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--充值弹窗-->
+            <div id="accountPayModal" class="accountPayModal" style="display: none">
+                <form class="clearfix layui-form" action="">
+                    <div class="detail-left fl">
+
+                    </div>
+                    <div class="detail-right fl">
+                        <div class="money-select">
+                            <ul class="select-list clearfix" id="pay-money-list">
+                                <li class="select-item active">
+                                    <span class="money">99元</span><br>
+                                    <span class="number">1次</span>
+                                </li>
+                                <li class="select-item">
+                                    <span class="money">194.04元</span><br>
+                                    <span class="number">2次</span>
+                                </li>
+                                <li class="select-item">
+                                    <span class="money">194.04元</span><br>
+                                    <span class="number">3次</span>
+                                </li>
+                                <li class="select-item">
+                                    <span class="money">194.04元</span><br>
+                                    <span class="number">4次</span>
+                                </li>
+                                <li class="select-item">
+                                    <span class="money">194.04元</span><br>
+                                    <span class="number">不限次数</span>
+                                    <span class="tip">VIP包年</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pay-type">
+                            <p class="select-pay">请选择支付方式</p>
+                                <div class="type-list">
+                                  <span class="alipay">
+                                    <input type="radio" name="payType" value="alipay" checked title="<i class='iconfont icon-alipay'></i>支付宝">
+                                  </span>
+                                      <span class="alipay">
+                                    <input type="radio" name="payType" value="wxpay" title="<i class='iconfont icon-weixinzhifu'></i>微信支付">
+                                  </span>
+                                      <span class="alipay">
+                                    <input type="radio" name="payType" value="compay" title="<i class='iconfont icon-compay'></i>公司转账">
+                                  </span>
+                                </div>
+                            <div class="paid">
+                                <span class="paid-money">应付：99.00元</span><br><br>
+                  <span>
+                <input type="checkbox" name="like1[write]" lay-skin="primary" lay-filter="allChoose">
+                &nbsp;&nbsp;<span class="balance">您当前账户余额<em>&nbsp;0&nbsp;</em>元</span>
+              </span>
+                            </div>
+                        </div>
+                        <div class="btn-box">
+                            <button class="btn-buy">购买</button>
+                            <button class="btn-toup">去充值</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+     <div class="footerWhite2">
+	<!--<div class="footerWhite_con">
+		<ul>
+			<li class="active"><a href="../nowHot/index.html"><i>实时热点</i></a></li>
+				<li class="fl heatIndex navItem">
+		            <a href="../heatIndex/heatIndex.html">
+		               热度指数
+		            </a>
+		        </li>
+		        <li class="fl publicOpinionTrend navItem">
+		            <a href="../publicOpinionMonitor/publicOpinionTrend.html">
+	                 	主题监测
+		            </a>
+		        </li>
+		        <li class="fl eventStudy navItem">
+		            <a href="../eventStudy/eventSelect.html">
+		                事件分析
+		            </a>
+		        </li>
+		        <li class="fl competing navItem">
+		            <a href="../competing/competingOption.html">
+		                竞品分析
+		            </a>
+		        </li>
+		        <li class="fl navItem report">
+		            <a href="../report/reportIndex.html">
+		               	 数据报告
+		            </a>
+		        </li>
+		        <li class="fl navItem search">
+		            <a href="../search/searchIndex.html">
+		                全网搜索
+		            </a>
+		            <img src="../../images/footWhite.png" alt="" />
+		        </li>
+			
+		</ul>
+		
+		
+	</div>-->
+	<div class="foot-down">
+			<div class="footdown-con">
+				© 京ICP备12012279号 版权所有 九次方大数据信息集团有限公司
+			</div>
+		</div>
+</div>
+				
+</body>
+</html>
+<script src="../../Lib/jquery-1.12.4.min.js"></script>
+<script src="../../Lib/layui/layui.js"></script>
+<script src="../../js/public.js"></script>
+<script>
+    $(function(){
+       /* $(".leftBar .menu-wrap li").eq(1).addClass('active');*/
+        $("#btnAccountPay").on('click',function(){
+            layer.open({
+                type: 1,
+                title: false,
+                area: ['905px', '518px'], //宽高
+                shade : [0.7 , '#000' , true],
+                closeBtn: 1,
+                content: $("#accountPayModal")
+            });
+        });
+
+        $(document).on('click','#pay-money-list li',function(){
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+
+        $(".u-content-wrap").on('click','.table-open',function(){
+            $(this).parent().parent().find('.fixed-wrap').addClass('open');
+            $(this).removeClass('table-open').addClass('table-close');
+        });
+        $(".u-content-wrap").on('click','.table-close',function(){
+            $(this).parent().parent().find('.fixed-wrap').removeClass('open');
+            $(this).removeClass('table-close').addClass('table-open');
+        });
+
+        layui.use(['layer', 'form', 'laypage','element'], function () {
+
+        });
+    });
+</script>

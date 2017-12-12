@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>关键词云</title>
+    <style>
+        #myChart{width:540px;height:310px;}
+    </style>
+    <script src="../../Lib/echarts-all-2.js"></script>
+</head>
+<body>
+<div id="myChart"></div>
+<script>
+    function createRandomItemStyle() {
+        return {
+            normal: {
+                color: 'rgb(' + [
+                    Math.round(Math.random() * 160),
+                    Math.round(Math.random() * 160),
+                    Math.round(Math.random() * 160)
+                ].join(',') + ')'
+            }
+        };
+    }
+
+    //关键词模拟数据--华为
+    var data=[
+        {
+            name: "华为",
+            value: 666
+        },
+        {
+            name: "品质",
+            value: 520
+        },
+        {
+            name: "荣耀",
+            value: 999
+        },
+        {
+            name: "P9",
+            value: 888
+        },
+        {
+            name: "任正非",
+            value: 777
+        },
+        {
+            name: "设计差",
+            value: 688
+        },
+        {
+            name: "投资",
+            value: 588
+        },
+        {
+            name: "英国",
+            value: 516
+        },
+        {
+            name: "印度",
+            value: 515
+        },
+        {
+            name: "待机长",
+            value: 483
+        },
+        {
+            name: "能源",
+            value: 462
+        },
+        {
+            name: "国产",
+            value: 449
+        },
+        {
+            name: "品质",
+            value: 409
+        },
+        {
+            name: "荣耀",
+            value: 999
+        },
+        {
+            name: "P9",
+            value: 888
+        },
+        {
+            name: "任正非",
+            value: 777
+        },
+        {
+            name: "设计差",
+            value: 688
+        },
+        {
+            name: "投资",
+            value: 588
+        },
+        {
+            name: "英国",
+            value: 516
+        },
+        {
+            name: "印度",
+            value: 515
+        },
+        {
+            name: "待机长",
+            value: 483
+        },
+        {
+            name: "能源",
+            value: 462
+        },
+        {
+            name: "国产",
+            value: 449
+        }
+    ];
+    keyWords(data);
+
+    function keyWords(data){
+        var colors=['#ff7234',"#62a0f3","#404450"];
+        for(var i=0; i<data.length; i++){
+            data[i].itemStyle={ normal:{color:colors[i%3]}};
+        }
+
+        var myChart = echarts.init(document.getElementById('myChart'));
+
+        var option = {
+            tooltip: {
+                show: true
+            },
+            series: [
+                {
+                    text: '关键词云',
+                    type: 'wordCloud',
+                    size: ['80%', '80%'],
+                    textRotation : [0, 45, 90, -45],
+                    textPadding: 5,
+                    autoSize: {
+                        enable: true,
+                        minSize: 14
+                    },
+                    data: data
+                }
+            ]
+        };
+        myChart.setOption(option);
+    }
+
+
+</script>
+</body>
+</html>

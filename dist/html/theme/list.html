@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>主题管理</title>
+    <link rel="stylesheet" href="../../Lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../../Lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/common.css">
+</head>
+<body class="theme1 theme-manage">
+    <header id='_header2' class='_header3' style='background: rgba(0,0,0,1);position: static;margin-bottom:30px;'>
+	<section class='_header_con2'>
+		<section class='logoTwo logo2'>
+			<a href="../index.html">
+				<img src="../../images/logo2.1.png" alt="" />
+			</a>
+		</section>
+		<section class='rightTwo' style='display:none;'>
+			<nav class='_navTwo clearfix'>
+				<li class="active"><a href="###"><span class='iconfont icon-shouye shouye'></span><i>首页</i></a></li>
+				<li><a href="./product/product.html">产品与服务</a></li>
+				<li><a href="./api/api.html">API接口</a></li>
+				<li><a href="./aboutUs/aboutUs.html" class='fei-contact'>关于我们</a></li>
+			</nav>
+			<div class="landr">
+				<a href="./loginAndRegister/loginAndRegister.html">立即登录</a>
+				<a href="./apply/apply.html">申请试用</a>
+			</div>
+		</section>
+		<!--<a href="javascript:;" class='skin'>
+			<img src="../images/skin.gif" alt="" />
+		</a>-->
+
+		<section class='rightTwo2 clearfix' style=''>
+			<nav class='_navTwo _navTwo2 clearfix'>
+				<li class='_heatIndex'><a href="../nowHot/index.html">实时热点</a></li>
+				<li class="fl heatIndex navItem">
+		            <a href="../heatIndex/heatIndex.html">
+		               热度指数
+		            </a>
+		        </li>
+		        <li class="fl publicOpinionTrend navItem">
+		            <a href="../publicOpinionMonitor/publicOpinionTrend.html">
+	                 	主题监测
+		            </a>
+		        </li>
+		        <li class="fl eventStudy navItem">
+		            <a href="../eventStudy/eventSelect.html">
+		                事件分析
+		            </a>
+		        </li>
+		        <li class="fl competing navItem">
+		            <a href="../competing/competingOption.html">
+		                竞品分析
+		            </a>
+		        </li>
+		        <li class="fl navItem report">
+		            <a href="../report/reportIndex.html">
+		               	 数据报告
+		            </a>
+		        </li>
+		        <li class="fl navItem search">
+		            <a href="../search/searchIndex.html">
+		                全网搜索
+		            </a>
+		        </li>
+			</nav>
+			<!--<div class="landr">
+				<a href="./loginAndRegister/loginAndRegister.html">立即登录</a>
+				<a href="./apply/apply.html">申请试用</a>
+			</div>-->
+		</section>
+		<div class='headerNavCenter landr landr2'>
+			<i class='iconfont icon-iconfontgerenzhongxin'></i>
+			<img src="../images/center.gif" alt="" />
+			<a href="../userCenter/index.html" class='a1'>用户名</a>
+			<em class='iconfont icon-sign-out' style='' title='退出'></em>
+		</div>
+		
+	</section>
+</header>
+
+    <div class="main">
+        <a class="btn-create" href="add.html">创建主题</a>
+        <div class="list-content">
+            <table class="layui-table" lay-skin="nob">
+                <colgroup>
+                    <col width="70">
+                    <col width="200">
+                    <col width="500">
+                    <col>
+                    <col width="150">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>主题名称</th>
+                    <th>关键词</th>
+                    <th>排除词</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="layui-hide">
+                    <td colspan="5" class="empty-data">无主题,请先创建主题</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><p class="name">宝光实业国际</p></td>
+                    <td><p class="keyword" title="宝光实业，亏损宝光实业，亏损宝光实业，亏损宝光实业，亏损宝光实业，亏损宝光实业，亏损宝光实业，亏损宝光实业，亏损">宝光实业，亏损宝光实业，亏损宝光实业，亏损宝光实业，亏损宝光实业，亏损宝光实业，亏损宝光实业，亏损宝光实业，亏损</p></td>
+                    <td>
+                        <p class="exclude" title="排除词">排除词</p>
+                    </td>
+                    <td>
+                        <a href="./add.html">
+                            <i class="iconfont icon-caozuo btn-edit"></i>
+                        </a>
+                        <a href="#">
+                            <i class="iconfont icon-3 btn-del"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="name">新疆地震</td>
+                    <td>新疆地震，塔县地震，新疆5.5级地震</td>
+                    <td>地震</td>
+                    <td>
+                        <a href="./add.html">
+                            <i class="iconfont icon-caozuo btn-edit"></i>
+                        </a>
+                        <a href="#">
+                            <i class="iconfont icon-3 btn-del"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="name">美国华盛顿枪击案</td>
+                    <td>美国枪击死亡，华盛顿枪击，华盛顿，枪击案，死亡...</td>
+                    <td></td>
+                    <td>
+                        <a href="./add.html">
+                            <i class="iconfont icon-caozuo btn-edit"></i>
+                        </a>
+                        <a href="#">
+                            <i class="iconfont icon-3 btn-del"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="name">时事政治</td>
+                    <td>新华网，人民日报，中国日报，央视网，中新社，中国国...</td>
+                    <td></td>
+                    <td>
+                        <a href="./add.html">
+                            <i class="iconfont icon-caozuo btn-edit"></i>
+                        </a>
+                        <a href="#">
+                            <i class="iconfont icon-3 btn-del"></i>
+                        </a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--footer-->
+	 <div class="footerWhite2">
+	<!--<div class="footerWhite_con">
+		<ul>
+			<li class="active"><a href="../nowHot/index.html"><i>实时热点</i></a></li>
+				<li class="fl heatIndex navItem">
+		            <a href="../heatIndex/heatIndex.html">
+		               热度指数
+		            </a>
+		        </li>
+		        <li class="fl publicOpinionTrend navItem">
+		            <a href="../publicOpinionMonitor/publicOpinionTrend.html">
+	                 	主题监测
+		            </a>
+		        </li>
+		        <li class="fl eventStudy navItem">
+		            <a href="../eventStudy/eventSelect.html">
+		                事件分析
+		            </a>
+		        </li>
+		        <li class="fl competing navItem">
+		            <a href="../competing/competingOption.html">
+		                竞品分析
+		            </a>
+		        </li>
+		        <li class="fl navItem report">
+		            <a href="../report/reportIndex.html">
+		               	 数据报告
+		            </a>
+		        </li>
+		        <li class="fl navItem search">
+		            <a href="../search/searchIndex.html">
+		                全网搜索
+		            </a>
+		            <img src="../../images/footWhite.png" alt="" />
+		        </li>
+			
+		</ul>
+		
+		
+	</div>-->
+	<div class="foot-down">
+			<div class="footdown-con">
+				© 京ICP备12012279号 版权所有 九次方大数据信息集团有限公司
+			</div>
+		</div>
+</div>
+				)
+</body>
+</html>
+<script src="../../Lib/jquery-1.12.4.min.js"></script>
+<script src="../../Lib/layui/layui.js"></script>
+<script src="../../js/public.js"></script>
+<script>
+
+</script>
+
+

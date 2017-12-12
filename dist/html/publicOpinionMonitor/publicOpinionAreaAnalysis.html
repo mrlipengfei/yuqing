@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>舆情监测-舆情分析-情感分析</title>
+    <link rel="stylesheet" href="../../Lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../../Lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/common.css">
+</head>
+<body class="theme1 publicOpinionTrend publicOpinionTrend1">
+<div class='commonHeader'>
+	<div class='header-wrap'>
+		<div class='header-logo'>
+			<a href="../index.html">
+				<img src="../../images/logo-white.png" alt="" />
+			</a>
+		</div>
+		<div class='header-right'>
+			<nav class='header-nav'>
+				<li><a href="../index.html"><span class='iconfont icon-shouye shouye'></span><i>首页</i></a></li>
+				<li class="apply-use"><a href="../apply/apply.html">申请使用</a></li>
+				<li class="api-content"><a href="../api/api.html">API接口</a></li>
+				<li class='header-li'><a href="javascript:;" class='fei-contact'>联系我们</a>
+
+				</li>
+			</nav>
+			<div class='fei contact'>
+				<!--<img src="../../images/white-sanjiao.png" alt="" />-->
+				<ul class="fei _contact">
+					<li>
+						<i class='iconfont icon-iconfontgerenzhongxin'></i>
+						<span>何先生</span>
+					</li>
+					<li>
+						<i class='iconfont icon-youxiang'></i>
+						<span>hyr@jusfoun.com</span>
+					</li>
+					<li>
+						<i class='iconfont icon-iconfontcolor39'></i>
+						<span>13600009999</span>
+					</li>
+					<li>
+						<i class='iconfont icon-dizhi'></i>
+						<span>北京市海淀区王庄路1号院清华同方
+	科技广场D座西楼16层</span>
+					</li>
+				</ul>
+			</div>
+			
+			<div class='headerNavCenter'>
+				<i class='iconfont icon-iconfontgerenzhongxin'></i>
+				<!--<img src="../images/center.gif" alt="" />-->
+				<span class='header-perCenter'>
+					用户名
+				</span>
+				<em class='iconfont icon-jiantousanjiaoxia'></em>
+				<ul class="header-pull">
+					<li>
+						<img src="../../images/white-sanjiao.png" alt="" />
+						<i class='iconfont icon-gerenzhongxin'></i>
+						<span><a href="../userCenter/index.html">个人中心</a></span>
+					</li>
+					<li>
+						<i class='iconfont icon-dianyuan'></i>
+						<span>退出</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--<a href="javascript:;" class='skin'>
+			<img src="../images/skin.gif" alt="" />
+		</a>-->
+	</div>
+</div>
+<!--<div class="navBarWrapper">
+    <ul class="navBar clearfix">
+        <li class="fl heatIndex navItem">
+            <a href="../heatIndex/heatIndex.html">
+               热度指数
+            </a>
+        </li>
+        <li class="fl publicOpinionTrend navItem">
+            <a href="../publicOpinionMonitor/publicOpinionTrend.html">
+                舆情监测
+            </a>
+            <ul class="subNav">
+                <li class="subNavItem">
+                    <a class="subNavItemA" href="../publicOpinionMonitor/publicOpinionTrend.html">
+                        舆情动态
+                    </a>
+                </li>
+                <li class="subNavItem">
+                    <a class="subNavItemA" href="../publicOpinionMonitor/publicOpinionAnalysis.html">
+                        舆情分析
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="fl eventStudy navItem">
+            <a href="../eventStudy/eventSelect.html">
+                事件分析
+            </a>
+        </li>
+        <li class="fl competing navItem">
+            <a href="../competing/competingOption.html">
+                竞品分析
+            </a>
+        </li>
+        <li class="fl navItem report">
+            <a href="../report/reportIndex.html">
+                舆情报告
+            </a>
+        </li>
+        <li class="fl publicOpinionWarn navItem">
+            <a href="../publicOpinionWarn/publicOpinionWarn.html">
+                舆情预警
+            </a>
+        </li>
+        <li class="fl theme-manage navItem">
+            <a href="../theme/list.html">
+                主题管理
+            </a>
+        </li>
+        <li class="fl navItem search">
+            <a href="../search/searchIndex.html">
+                全网搜索
+            </a>
+        </li>
+    </ul>
+    
+</div>-->
+	
+<header id='_header2' style='background: rgba(0,0,0,1);position: static;margin-bottom:30px;'>
+	<section class='_header_con2'>
+		<section class='logoTwo logo2'>
+			<a href="../index.html">
+				<img src="../../images/logo2.1.png" alt="" />
+			</a>
+		</section>
+		<section class='rightTwo2 clearfix' style=''>
+			<nav class='_navTwo _navTwo2 clearfix'>
+				<li class='_heatIndex'><a href="../nowHot/index.html">实时热点</a></li>
+				<li class="fl heatIndex navItem">
+		            <a href="../heatIndex/heatIndex.html">
+		               热度指数
+		            </a>
+		        </li>
+		        <li class="fl publicOpinionTrend navItem">
+		            <a href="../publicOpinionMonitor/publicOpinionTrend.html" class='_red'>
+	                 	主题监测
+		            </a>
+		        </li>
+		        <li class="fl eventStudy navItem">
+		            <a href="../eventStudy/eventSelect.html">
+		                事件分析
+		            </a>
+		        </li>
+		        <li class="fl competing navItem">
+		            <a href="../competing/competingOption.html">
+		                竞品分析
+		            </a>
+		        </li>
+		        <li class="fl navItem report">
+		            <a href="../report/reportIndex.html">
+		               	 数据报告
+		            </a>
+		        </li>
+		        <li class="fl navItem search">
+		            <a href="../search/searchIndex.html">
+		                全网搜索
+		            </a>
+		        </li>
+			</nav>
+		</section>
+		<div class='headerNavCenter landr landr2'>
+				<i class='iconfont icon-iconfontgerenzhongxin'></i>
+				<img src="../images/center.gif" alt="" />
+				<a href="../userCenter/index.html" class='a1'>用户名</a>
+				<em class='iconfont icon-sign-out' style='' title='退出'></em>
+			</div>
+	</section>
+</header>
+
+
+<div class="main main_con" style="overflow: hidden;">
+	<ul class='annlysisNav clearfix'>
+	<li class='li1'><a href="./publicOpinionTrend.html">主题动态</a></li>
+	<li class='li2'><a href="./publicOpinionAnalysis.html">主题分析</a></li>
+	<li class='li3'><a href="./alertLog.html">预警日志</a></li>
+	<li class='li4'><a href="./themeManager.html">主题管理</a></li>
+</ul>
+
+    <div class="leftBar">
+        <form class="layui-form" action="">
+            <div class="leftBarItemLine">
+                <span class="itemTit">主题名称</span>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <select name="interest" lay-filter="themeName">
+                            <option value="0"></option>
+                            <option value="1" selected="">一带一路</option>
+                            <option value="2">一带一路</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="leftBarItemLine keyWordsList">
+                <span class="itemTit">关键词</span>
+                <ul class="layui-form-item">
+                    <li class="keyWords">
+                        <span>北京</span>
+                    </li>
+                    <li class="keyWords">
+                        <span>一带一路</span>
+                    </li>
+                    <li class="keyWords">
+                        <span>一带一路</span>
+                    </li>
+                </ul>
+                <div class="fixBtn">
+                    <i class="iconfont icon-xiugai-copy"></i>
+                    <span>修改</span>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="mainCon mainCon2">
+        <ul class="clearfix analysisNav">
+            <li class="analysisNavItem fl">
+                <i class="icon-zuhefenxi iconfont"></i>
+                <a href="./publicOpinionAnalysis.html">舆情分析</a>
+            </li>
+            <li class="analysisNavItem fl">
+                <i class="icon-qingganfenxizhishu iconfont"></i>
+                <a href="./publicOpinionEmotionAnalysis.html">情感分析</a>
+            </li>
+            <li class="analysisNavItem fl active">
+                <i class="icon-weizhi1 iconfont"></i>
+                <a href="./publicOpinionAreaAnalysis.html">地域分布</a>
+            </li>
+        </ul>
+        <div class="analysisCon">
+            <div class="analysisConItem">
+                <div class="echartWrap3">
+                    <div class="echartHead clearfix">
+                        <h4 class="fl"><i class="icon-circle iconfont"></i>地域分布</h4>
+                        <i class="iconfont icon-xiazai fr"></i>
+                        <div class="filterBox fr">
+                            <form class="layui-form" action="">
+                                <div class="fl">
+                                    <div class="layui-input-block">
+                                        <select name="interest" lay-filter="timePeriod">
+                                            <option value="0"></option>
+                                            <option value="1" selected="">24小时</option>
+                                            <option value="2">一个月</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="fl">
+                                    <div class="layui-input-inline">
+                                        <input type="text" class="layui-input timeInput" id="startDate" placeholder="开始时间">
+                                    </div>
+                                </div>
+                                <div class="fl midLine">-</div>
+                                <div class="fl">
+                                    <div class="layui-input-inline">
+                                        <input type="text" class="layui-input timeInput" id="endDate" placeholder="结束时间">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="echart2">
+                        <div id="icon0"></div>
+                        <div id="main" ></div>
+                    </div>
+                    <div class="tableWrap clearfix">
+                        <table class="fl leftTable">
+                            <thead>
+                                <tr>
+                                    <th class="index"></th>
+                                    <th class="areaName">地域</th>
+                                    <th class="value"></th>
+                                    <th class="number">信息量</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="index">1</td>
+                                <td class="areaName">北京</td>
+                                <td class="value">
+                                    <span class="val val1"></span>
+                                </td>
+                                <td class="number">1314521</td>
+                            </tr>
+                            <tr>
+                                <td class="index">2</td>
+                                <td class="areaName">广东</td>
+                                <td class="value">
+                                    <span class="val val2"></span>
+                                </td>
+                                <td class="number">1214521</td>
+                            </tr>
+                            <tr>
+                                <td class="index">3</td>
+                                <td class="areaName">重庆</td>
+                                <td class="value">
+                                    <span class="val val3"></span>
+                                </td>
+                                <td class="number">1114521</td>
+                            </tr>
+                            <tr>
+                                <td class="index">4</td>
+                                <td class="areaName">江苏</td>
+                                <td class="value">
+                                    <span class="val val4"></span>
+                                </td>
+                                <td class="number">1014521</td>
+                            </tr>
+                            <tr>
+                                <td class="index">5</td>
+                                <td class="areaName">上海</td>
+                                <td class="value">
+                                    <span class="val val5"></span>
+                                </td>
+                                <td class="number">914521</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="fl rightTable">
+                            <thead>
+                                <tr>
+                                    <th class="index"></th>
+                                    <th class="areaName">地域</th>
+                                    <th class="value"></th>
+                                    <th class="number">信息量</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="index">6</td>
+                                    <td class="areaName">西藏</td>
+                                    <td class="value">
+                                        <span class="val val6"></span>
+                                    </td>
+                                    <td class="number">814521</td>
+                                </tr>
+                                <tr>
+                                    <td class="index">7</td>
+                                    <td class="areaName">湖南</td>
+                                    <td class="value">
+                                        <span class="val val7"></span>
+                                    </td>
+                                    <td class="number">714521</td>
+                                </tr>
+                                <tr>
+                                    <td class="index">8</td>
+                                    <td class="areaName">河北</td>
+                                    <td class="value">
+                                        <span class="val val8"></span>
+                                    </td>
+                                    <td class="number">614521</td>
+                                </tr>
+                                <tr>
+                                    <td class="index">9</td>
+                                    <td class="areaName">福建</td>
+                                    <td class="value">
+                                        <span class="val val9"></span>
+                                    </td>
+                                    <td class="number">514521</td>
+                                </tr>
+                                <tr>
+                                    <td class="index">10</td>
+                                    <td class="areaName">山西</td>
+                                    <td class="value">
+                                        <span class="val val10"></span>
+                                    </td>
+                                    <td class="number">414521</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footerWhite">
+	<div class="footerWhite_con">
+		<ul>
+			<li>
+				<a href="">关于我们</a>
+			</li>
+			<li>
+				<a href="">联系我们</a>
+			</li>
+			<li>
+				<a href="">帮助中心</a>
+				<img src="../../images/footWhite.png" alt="" />
+			</li>
+		</ul>
+		<span>Copyright ©2013-2017 千图网 沪ICP备10011451号-6</span>
+	</div>
+</div>
+
+</body>
+</html>
+<script src="../../Lib/jquery-1.12.4.min.js"></script>
+<script src="../../Lib/layui/layui.js"></script>
+<script src="../../Lib/echarts.min.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/public.js"></script>
+<script src="../../js/publicOpinionAreaAnalysis.js"></script>
+
+
