@@ -138,9 +138,15 @@ TreeOption.prototype.init = function (newOption) {
 
 //调用纵向树图
 //事件轨迹
-var hotspot = new TreeOption('spread');
-var myOptionH = {};
-hotspot.init(myOptionH);
+try {
+				var hotspot = new TreeOption('spread');
+				var myOptionH = {};
+				hotspot.init(myOptionH);
+} catch (error) {
+				var catchHtml = '<img src="../../images/nodata.jpg">';
+				$("#spread").css({ "text-align": "center", "overflow": "hidden" });
+				$("#spread").html(catchHtml);
+}
 
 /*//词云图封装
 function WordCloud(demo){

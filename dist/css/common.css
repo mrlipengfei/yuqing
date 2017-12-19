@@ -597,13 +597,14 @@ body.index ._header2 ._navTwo li._indexNav a, body.product ._header2 ._navTwo li
 #_header2 {
     background: black;
     position: relative;
+    min-width: 1300px;
 }
 
 .aboutBanner {
     min-width: 1300px;
     height: 380px;
     width: 100%;
-    background: url(../../images/aboutB.png) no-repeat center;
+    background: url(../images/aboutB.jpg) no-repeat center;
 }
 
 .aboutContent {
@@ -1605,7 +1606,7 @@ body.bigScreen .layui-laydate-footer span:hover {
 .main2 {
     min-height: calc(100vh - 275px);
     width: 75%;
-    min-width: 1200px;
+    min-width: 1300px;
     margin: 0 auto;
 }
 
@@ -1726,7 +1727,10 @@ body.bigScreen .layui-laydate-footer span:hover {
     width: 100%;
     background: transparent;
     position: absolute;
+    top: 0;
+    left: 0;
     z-index: 10;
+    min-width: 1300px;
 }
 
 #_header2 .logoTwo {
@@ -1817,6 +1821,36 @@ body.bigScreen .layui-laydate-footer span:hover {
     min-width: 1300px;
 }
 
+@media screen and (max-width: 1300px) {
+    .rightTwo2 {
+        margin-left: -188px !important;
+    }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1500px) {
+    .rightTwo2 {
+        margin-left: -188px !important;
+    }
+}
+
+@media screen and (min-width: 1500px) and (max-width: 1600px) {
+    .rightTwo2 {
+        margin-left: -85px !important;
+    }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1700px) {
+    .rightTwo2 {
+        margin-left: -168px !important;
+    }
+}
+
+@media screen and (min-width: 1700px) and (max-width: 1920px) {
+    .rightTwo2 {
+        margin-left: -325px !important;
+    }
+}
+
 #_header2 {
     min-width: 1300px;
 }
@@ -1850,10 +1884,13 @@ body.bigScreen .layui-laydate-footer span:hover {
     height: 50px;
 }
 
+#_header2 .rightTwo2 {
+    margin-left: -404px;
+}
+
 #_header2 .rightTwo2 .landr {
     height: 100%;
     line-height: 69px;
-    float: left;
 }
 
 #_header2 .rightTwo2 .landr a:first-child {
@@ -1963,6 +2000,10 @@ body.bigScreen .layui-laydate-footer span:hover {
     font-size: 14px;
 }
 
+.footerIndex {
+    min-width: 1300px !important;
+}
+
 body.index ._header2 ._navTwo li._indexNav a, body.product ._header2 ._navTwo li._productNav a, body.api-content ._header2 ._navTwo li._apiNav a, body.aboutUs ._header2 ._navTwo li._contactNav a {
     color: #ff8e08 !important;
 }
@@ -1977,7 +2018,8 @@ body.hotIndex ._navTwo2 li._heatIndex > a, body.heatIndex ._navTwo2 li.heatIndex
 }
 
 .main {
-    min-height: calc(100vh - 199px);
+    min-height: calc(100vh - 180px);
+    width: 75%;
 }
 
 body {
@@ -4836,7 +4878,7 @@ body {
 }
 
 .hotspot_con .publicDiv .fei_drew {
-    width: 600px;
+    width: 98%;
 }
 
 .hotspot_con .shiti {
@@ -4897,7 +4939,13 @@ body {
     padding-bottom: 2px;
 }
 
-._header_con, .serveOne_con2, .serveTwo_con, .scene_con2, .win_con, .footer_con {
+.serveOne_con2, .serveTwo_con, .scene_con2, .win_con, .footer_con {
+    width: 70%;
+    min-width: 1340px;
+    margin: 0 auto;
+}
+
+._header_con {
     width: 70%;
     min-width: 1300px;
     margin: 0 auto;
@@ -4911,20 +4959,33 @@ input::-webkit-input-placeholder {
     color: #0c4876;
 }
 
+body.index {
+    background: #fff;
+}
+
+body.index .footerIndex {
+    min-width: 1340px !important;
+}
+
 /*banner*/
 #banner {
     width: 100%;
     height: 1080px;
-    min-width: 1300px;
+    min-width: 1340px;
 }
 
 #banner ul {
     height: 100%;
     width: 100%;
     z-index: 1;
-    min-width: 1200px;
+    min-width: 1340px;
     position: relative;
     overflow: hidden;
+}
+
+#banner ul img {
+    height: 100%;
+    width: 100%;
 }
 
 #banner ul li {
@@ -4932,15 +4993,15 @@ input::-webkit-input-placeholder {
     width: 100%;
     position: absolute;
     top: 0;
-    background: url(../images/banner2.1.png) no-repeat center 100%;
+    background: url(../images/banner2.jpg) no-repeat center 100%;
 }
 
 #banner ul li:nth-child(2) {
-    background: url(../images/banner2.2.png) no-repeat center 100%;
+    background: url(../images/banner2.2.jpg) no-repeat center 100%;
 }
 
 #banner ul li:nth-child(3) {
-    background: url(../images/banner2.3.png) no-repeat center 100%;
+    background: url(../images/banner2.3.jpg) no-repeat center 100%;
 }
 
 #banner ._scroll {
@@ -5054,7 +5115,7 @@ input::-webkit-input-placeholder {
 /*serveOne*/
 #serveOne2 {
     width: 100%;
-    min-width: 1300px;
+    min-width: 1340px;
     height: 850px;
     background: #fff;
 }
@@ -5153,7 +5214,7 @@ input::-webkit-input-placeholder {
 #serveTwo {
     width: 100%;
     height: 599px;
-    min-width: 1300px;
+    min-width: 1340px;
     background: #f3f3f3;
 }
 
@@ -5171,7 +5232,7 @@ input::-webkit-input-placeholder {
 #scene2 {
     width: 100%;
     height: 665px;
-    min-width: 1300px;
+    min-width: 1340px;
     box-sizing: border-box;
     padding-bottom: 20px;
     background: url(../images/sev2.1.png) no-repeat center 100%;
@@ -5281,8 +5342,7 @@ input::-webkit-input-placeholder {
 }
 
 #ourClientele .win_con {
-    min-width: 1200px;
-    min-width: 1200px;
+    min-width: 1300px;
     height: 555px;
     box-sizing: border-box;
     padding-top: 66px;
@@ -5297,7 +5357,7 @@ input::-webkit-input-placeholder {
 }
 
 #ourClientele .win_con ul {
-    margin-right: -50px;
+    margin-right: -44px;
 }
 
 #ourClientele .win_con ul li {
@@ -5315,7 +5375,7 @@ input::-webkit-input-placeholder {
 #try {
     height: 666px;
     width: 100%;
-    min-width: 1300px;
+    min-width: 1340px;
     background: url(../images/try.png) no-repeat center;
     position: relative;
 }
@@ -5892,6 +5952,7 @@ img[src*="http://api1.map.bdimg.com/customimage/tile?&x=-6&y=2&"], img[src*="htt
 .nowhot-cont .nh-map {
     width: 100%;
     margin-top: -30px;
+    min-width: 1300px;
 }
 
 #nh-map {
@@ -6303,7 +6364,7 @@ img[src*="http://api1.map.bdimg.com/customimage/tile?&x=-6&y=2&"], img[src*="htt
     height: 380px;
     width: 100%;
     min-width: 1300px;
-    background: url(../../images/productB.png) no-repeat center;
+    background: url(../images/productB.jpg) no-repeat center;
 }
 
 .product_item {
@@ -6382,6 +6443,7 @@ img[src*="http://api1.map.bdimg.com/customimage/tile?&x=-6&y=2&"], img[src*="htt
 
 .product_c {
     background: #f8fbff;
+    min-width: 1300px;
 }
 
 @charset "UTF-8";
@@ -7093,7 +7155,6 @@ img[src*="http://api1.map.bdimg.com/customimage/tile?&x=-6&y=2&"], img[src*="htt
 
 .main_con {
     background: #fff !important;
-    padding-bottom: 30px;
 }
 
 .timeInput {

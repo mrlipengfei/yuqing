@@ -46,7 +46,7 @@ $(function () {
 function bMaInfo(maptypeNew) {
     var map = new BMap.Map("nh-map", { mapType: maptypeNew }); //,{minZoom:3,maxZoom:15});          // 创建地图实例
 
-    map.centerAndZoom(new BMap.Point(23.68781, 37.743208), 4); // 初始化地图，设置中心点坐标和地图级别
+    map.centerAndZoom(new BMap.Point(2.08076, 36.68656), 4); // 初始化地图，设置中心点坐标和地图级别
     //map.centerAndZoom('北京', 4);                 // 初始化地图，设置中心点坐标和地图级别
 
     //map.enableScrollWheelZoom();                    // 支持缩放效果
@@ -70,7 +70,7 @@ function bMaInfo(maptypeNew) {
         marker[i] = new BMap.Marker(point[i].point, { icon: myIcon[randomIcon()] });
         map.addOverlay(marker[i]);
         //marker[i].addEventListener("click",newLink);
-        addClickHandler(point[i].link, marker[i]);
+        //addClickHandler(point[i].link, marker[i]);
         //marker[i].setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
     }
     function addClickHandler(url, marker) {
