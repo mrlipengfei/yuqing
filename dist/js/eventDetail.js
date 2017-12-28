@@ -661,6 +661,11 @@ function chart5() {
       trigger: 'axis',
       borderColor: '#313948',
       borderWidth: 1,
+      formatter: function formatter(params) {
+        console.log(params);
+        var str = params[0].name + '<br><b style="font-size:20px;text-aligin:center;min-width:100px;text-align:center">' + params[0].value + '</b>';
+        return str;
+      },
       axisPointer: { // 坐标轴指示器，坐标轴触发有效
         type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
       },

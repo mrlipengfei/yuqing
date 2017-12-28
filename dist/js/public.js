@@ -157,9 +157,9 @@ $('.feiword-input').focus(function () {
 	$(this).removeClass('input-shadow');
 });
 
-$(".leftBar .menu-wrap li").click(function () {
-	$(this).addClass('active').siblings().removeClass('active');
-});
+//$(".leftBar .menu-wrap li").click(function(){
+//	$(this).addClass('active').siblings().removeClass('active');
+//})
 
 //退出登录
 $('.icon-sign-out').click(function () {
@@ -175,3 +175,16 @@ var timer = setInterval(function () {
 		clearInterval(timer);
 	}
 }, 1000);
+
+//用户中心下拉
+$('._hover').stop().mouseover(function (event) {
+	$('.menu-wrap1').stop().slideDown(300);
+	event.stopPropagation();
+}).stop().mouseout(function (event) {
+	$('.menu-wrap1').stop().slideUp(300);
+	event.stopPropagation();
+});
+//进入用户中心
+$('._hover1').click(function () {
+	window.location.href = '/html/userCenter/index.html';
+});

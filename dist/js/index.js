@@ -76,3 +76,10 @@ $('._scroll').click(function () {
 $('.scene_con2 ul>li').mouseover(function () {
   $(this).addClass("cengji").siblings("li").removeClass("cengji");
 });
+
+//input聚焦
+$('.layui-input').focus(function () {
+  $(this).addClass('active');
+}).blur(function () {
+  $(this).removeClass('active');
+});

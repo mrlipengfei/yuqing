@@ -156,7 +156,11 @@
 		
 		
 		$('.layui-input').focus(function(){
-			
+			$(this).addClass('input-color');
+		}).blur(function(){
+			$(this).removeClass('input-color');
+		});
+		$('.layui-textarea').focus(function(){
 			$(this).addClass('input-color');
 		}).blur(function(){
 			$(this).removeClass('input-color');
