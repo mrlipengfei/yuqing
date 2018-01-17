@@ -60,7 +60,7 @@ function bMaInfo(maptypeNew) {
 
     var point = [{ point: new BMap.Point(116.564239, 35.384455), link: 'http://www.baidu.com' }, { point: new BMap.Point(120.243591, 36.057281), link: 'http://www.sina.com' }, { point: new BMap.Point(118.117984, 24.342753), link: 'http://www.qq.com' }, { point: new BMap.Point(121.501614, 29.532305), link: 'http://www.sohu.com' }, { point: new BMap.Point(121.490259, 31.058378), link: 'http://www.163.com' }, { point: new BMap.Point(113.537884, 23.02506), link: 'http://www.sogou.com' }, { point: new BMap.Point(110.422488, 21.18728), link: 'http://www.taobao.com' }, { point: new BMap.Point(117.603435, 38.780506), link: 'http://www.jd.com' }, { point: new BMap.Point(121.580925, 38.883453), link: 'http://www.12306.cn' }, { point: new BMap.Point(47.776793, 22.615121), link: 'http://www.12306.cn' }, { point: new BMap.Point(10.701618, 51.407521), link: 'http://www.12306.cn' }, { point: new BMap.Point(3.489878, 48.267664), link: 'http://www.12306.cn' }];
 
-    var myIcon = [new BMap.Icon("/images/eightGk1.png", new BMap.Size(44, 44)), new BMap.Icon("/images/eightGk2.png", new BMap.Size(20, 20)), new BMap.Icon("/images/eightGk3.png", new BMap.Size(10, 10)), new BMap.Icon("/images/eightGk4.png", new BMap.Size(4, 4))];
+    var myIcon = [new BMap.Icon("/dist/images/eightGk1.png", new BMap.Size(44, 44)), new BMap.Icon("/dist/images/eightGk2.png", new BMap.Size(20, 20)), new BMap.Icon("/dist/images/eightGk3.png", new BMap.Size(10, 10)), new BMap.Icon("/dist/images/eightGk4.png", new BMap.Size(4, 4))];
     var myIconLen = myIcon.length;
     function randomIcon() {
         return parseInt(Math.random() * myIconLen);;
